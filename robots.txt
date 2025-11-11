@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://www.flockrush.com/sitemeta/sitemap.xml
+Sitemap: https://www.flockrush.com/sitemap.xml

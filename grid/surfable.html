@@ -43,6 +43,16 @@
         nav { padding: 2rem 0; border-bottom: 1px solid #222; }
        .back-link { color: #666; text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; }
        .back-link:hover { color: var(--accent-cyan); }
+        @media (max-width: 768px) {
+            .split {
+                grid-template-columns: 1fr; /* Stacks the text and code */
+                gap: 3rem;
+                padding: 3rem 0;
+            }
+            header { height: auto; min-height: 80vh; padding: 4rem 0; }
+            h1 { font-size: 2.5rem; }
+            .stat-box .stat-num { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>

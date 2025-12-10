@@ -5,26 +5,11 @@
  
     <meta name="keywords" 
         content="autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
-    <title>The Biological Architecture | Flockrush Grid</title>
+    <title>Bio-Native OS Architecture | Flockrush Grid</title>
     
     <meta name="description" 
         content="The 5 Pillars of the Flockrush Grid: Self-aware, Self-evolving, Self-healing, Self-protective, and Self-sustaining. See the code structure." />
-    <link rel="canonical" href="https://www.flockrush.com/grid/pillars.html" /> 
-    
-    <meta property="og:title" content="The Biological Architecture | Flockrush Grid" />
-    <meta property="og:description" content="Not 'AI-assisted.' Autonomous-first with human-on-the-loop governance." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.flockrush.com/grid" />
-    <meta property="og:image" content="../assets/grid/flockrushgrid-og.webp" /> 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Biological Architecture | Flockrush Grid" />
-    <meta name="twitter:description" content="Autonomous. Aware. Aligned. From signal to outcome." />
-    <meta name="twitter:image" content="../assets/grid/flockrushgrid-og.webp" />
-    <link rel="icon" type="image/png" href="../assets/grid/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
-    <link rel="shortcut icon" href="../assets/grid/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/grid/apple-touch-icon.png" />
-    <link rel="manifest" href="../assets/grid/site.webmanifest" />
+    <link rel="canonical" href="https://www.flockrush.com/grid/pillars" /> 
     
     
     <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
@@ -48,6 +33,22 @@
         nav { padding: 2rem 0; border-bottom: 1px solid #222; }
        .back-link { color: #666; text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; }
        .back-link:hover { color: var(--accent-cyan); }
+        .split-layout {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .split-layout {
+                grid-template-columns: 1fr; /* Stack the Tree view and Pillars */
+                gap: 2rem;
+            }
+            .pillar-grid {
+                grid-template-columns: 1fr; /* Stack the bottom 3 pillars */
+            }
+            h1 { font-size: 2rem !important; }
+        }
     </style>
 </head>
 <body>
@@ -125,6 +126,8 @@
         </div>
     </div>
 </div>
-
+<footer style="text-align:center; padding: 4rem 0; color: #444;">
+    &copy; 2025 Flockrush Grid. Bio-Native OS Architecture.
+</footer>
 </body>
 </html>

@@ -4,13 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   
-    <meta name="keywords" 
-        content="autonomous-first, abos, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
+    <meta name="keywords" content="autonomous-first, abos, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
     <title>Flockrush Grid: ABOS - Autonomous Business OS</title>
     
-    <meta name="description" 
-        content="Flockrush Grid is the first true autonomous-first business OS. Built AI-native with human-on-the-loop governance, it is not an AI-assistant or copilot. It is a self-aware, self-evolving system. Enter the future." />
-    
+    <meta name="description" content="Flockrush Grid is the first true autonomous-first business OS. Built AI-native with human-on-the-loop governance, it is not an AI-assistant or copilot. It is a self-aware, self-evolving system. Enter the future." />
     <link rel="canonical" href="https://www.flockrush.com/grid" /> 
     
     <meta property="og:title" content="Flockrush Grid: ABOS - Autonomous Business OS" />
@@ -63,16 +60,20 @@
             --font-body: "Helvetica Neue", Arial, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; }
+        body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
-        /* HERO */
+        /* HERO FIXES */
         #hero {
-            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            /* Changed from height: 100vh to min-height with dvh for mobile browsers */
+            min-height: 100dvh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; background: radial-gradient(circle at center, #111 0%, #000 100%);
+            /* Added padding so text doesn't touch the very top on short screens */
+            padding: 4rem 1.5rem; 
         }
-        h1 { font-family: var(--font-display); font-size: 4rem; letter-spacing: -2px; margin-bottom: 1rem; }
+        h1 { font-family: var(--font-display); font-size: 4rem; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; }
        .glitch { color: var(--accent-cyan); }
        .hero-tag { color: var(--accent-purple); font-family: var(--font-display); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; font-size: 0.9rem; }
 
@@ -92,6 +93,13 @@
        .card-link { color: var(--accent-cyan); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
         
         footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #555; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; } /* Shrink huge text */
+            .card-grid { grid-template-columns: 1fr; } /* Force single column stack */
+            .journey-card { min-height: auto; }
+        }
     </style>
 </head>
 <body>
@@ -154,7 +162,8 @@
 
     <footer>
         <div class="container">
-            <p>Flockrush Grid &copy; 2025. Stop Assisting. Start Governing.</p>
+            <p>Flockrush Grid &copy; 2025. Start orchestrating outcomes.</p>
+            <p>Stop Assisting. Start Governing.</p>
         </div>
     </footer>
 

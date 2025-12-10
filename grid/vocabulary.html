@@ -4,25 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   
-    <meta name="keywords" 
-        content="autonomous-first, abos, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
+    <meta name="keywords" content="autonomous-first, abos, Flockrush Grid" />
     <title>The New Vocabulary | Flockrush Grid</title>
     
-    <meta name="description" 
-        content="The legacy tech industry uses words to hide their limitations. We use words to define our architecture. To understand the Grid, you must first unlearn the 'Copilot'." />
-
     <link rel="canonical" href="https://www.flockrush.com/grid/vocabulary.html" /> 
     <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
 
-    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
     <style>
         :root { --base-bg: #050505; --accent-cyan: #00FFC2; --text-main: #fff; --font-mono: "Courier New", monospace; }
-        body { background: var(--base-bg); color: var(--text-main); font-family: "Helvetica Neue", sans-serif; margin: 0; }
+        body { background: var(--base-bg); color: var(--text-main); font-family: "Helvetica Neue", sans-serif; margin: 0; overflow-x: hidden; }
        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
         
-        h1 { font-size: 3rem; font-family: var(--font-mono); text-align: center; margin-bottom: 1rem; }
+        h1 { font-size: 3rem; font-family: var(--font-mono); text-align: center; margin-bottom: 1rem; line-height: 1.1; }
         
-       .dict-entry { margin-bottom: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-bottom: 1px solid #222; padding-bottom: 4rem; }
+        /* The Grid that was breaking */
+       .dict-entry { 
+           margin-bottom: 4rem; 
+           display: grid; 
+           grid-template-columns: 1fr 1fr; /* Default is side-by-side */
+           gap: 2rem; 
+           border-bottom: 1px solid #222; 
+           padding-bottom: 4rem; 
+        }
+
        .term-bad { color: #666; text-decoration: line-through; font-size: 1.5rem; font-family: var(--font-mono); margin-bottom: 1rem; display: block; }
        .term-good { color: var(--accent-cyan); font-size: 2rem; font-weight: bold; font-family: var(--font-mono); margin-bottom: 1rem; display: block; }
        .definition { background: #111; padding: 1.5rem; border-radius: 4px; height: 100%; }
@@ -32,6 +36,16 @@
         nav { padding: 2rem 0; border-bottom: 1px solid #222; }
        .back-link { color: #666; text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; }
        .back-link:hover { color: var(--accent-cyan); }
+
+        /* FIX: Stack elements on mobile */
+        @media (max-width: 768px) {
+            .dict-entry {
+                grid-template-columns: 1fr; /* Force stack */
+                gap: 3rem;
+            }
+            h1 { font-size: 2rem; }
+            .container { padding: 2rem 1.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -64,7 +78,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="dict-entry">
         <div>
             <span class="term-bad">Human-in-the-Loop</span>
@@ -98,11 +112,10 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <footer style="text-align:center; padding: 4rem 0; color: #444;">
-    &copy; 2025 Flockrush Grid.
+    &copy; 2025 Flockrush Grid. Start orchestrating outcomes.
 </footer>
 
 </body>

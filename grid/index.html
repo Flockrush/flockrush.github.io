@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <meta charset="utf-t" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Flockrush Grid: The Autonomous AI-native Business OS</title>
+  
+    <meta name="keywords" 
+        content="autonomous-first, abos, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
+    <title>Flockrush Grid: ABOS - Autonomous Business OS</title>
     
     <meta name="description" 
         content="Flockrush Grid is the first true autonomous-first business OS. Built AI-native with human-on-the-loop governance, it is not an AI-assistant or copilot. It is a self-aware, self-evolving system. Enter the future." />
     
-    <meta name="keywords" 
-        content="autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
-
     <link rel="canonical" href="https://www.flockrush.com/grid" /> 
     
-    <meta property="og:title" content="Flockrush Grid: The Autonomous AI-native Business OS" />
+    <meta property="og:title" content="Flockrush Grid: ABOS - Autonomous Business OS" />
     <meta property="og:description" content="Not 'AI-assisted.' Autonomous-first with human-on-the-loop governance." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.flockrush.com/grid" />
     <meta property="og:image" content="../assets/grid/flockrushgrid-og.webp" /> 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Flockrush Grid: The Autonomous AI-native Business OS" />
+    <meta name="twitter:title" content="Flockrush Grid: ABOS - Autonomous Business OS" />
     <meta name="twitter:description" content="Autonomous. Aware. Aligned. From signal to outcome." />
     <meta name="twitter:image" content="../assets/grid/flockrushgrid-og.webp" />
     <link rel="icon" type="image/png" href="../assets/grid/favicon-96x96.png" sizes="96x96" />
@@ -33,8 +32,8 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Flockrush Grid",
-      "alternateName": "The Autonomous AI-native Business OS",
+      "name": "Flockrush Grid: ABOS",
+      "alternateName": "Autonomous Business OS",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Cloud-based SaaS",
       "keywords": "autonomous-first, AI-native business OS, human-on-the-loop, autonomous agents, self-evolving OS, not a copilot",
@@ -55,700 +54,109 @@
     }
     </script>
 
-
     <style>
         :root {
-            --base-bg: #0A0E1A; --content-bg: #120029; --accent-cyan: #00CED1;
-            --text-primary: #FFFFFF; --text-secondary: #8C90A3;
-            --font-display: "Avenir Next LT Pro", "Helvetica Neue", Arial, sans-serif;
-            --font-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            --base-bg: #050505; --content-bg: #0A0F14;
+            --accent-cyan: #00FFC2; --accent-purple: #BD00FF;
+            --text-primary: #EDEDED; --text-secondary: #888888;
+            --font-display: "Courier New", Courier, monospace;
+            --font-body: "Helvetica Neue", Arial, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: var(--font-display); background-color: var(--base-bg);
-            color: var(--text-primary); line-height: 1.6;
-            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-        }
-        .container { max-width: 1127px; margin: 0 auto; padding: 0 1.5rem; }
-        h1, h2, h3 { font-weight: bold; line-height: 1.2; margin-bottom: 1.5rem; }
-        h1 { font-size: 3.5rem; } h2 { font-size: 2.5rem; } h3 { font-size: 1.5rem; }
-        p { font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
-        section { padding: 6rem 0; }
-        .cyan-accent { color: var(--accent-cyan); }
-        .text-center { text-align: center; }
-        .btn {
-            display: inline-block; font-family: var(--font-display); font-weight: bold;
-            font-size: 1rem; text-decoration: none; padding: 0.9em 2.2em;
-            border-radius: 50px; border: 2px solid transparent; cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .btn-primary {
-            background-color: var(--accent-cyan); color: var(--base-bg);
-            border-color: var(--accent-cyan);
-        }
-        .btn-primary:hover { background-color: var(--text-primary); border-color: var(--text-primary); }
-        .btn-secondary {
-            background-color: transparent; color: var(--text-primary);
-            border-color: var(--text-primary);
-        }
-        .btn-secondary:hover { background-color: var(--text-primary); color: var(--base-bg); }
-        .cta-container { margin-top: 2.5rem; }
-        .cta-container .btn { margin: 0 0.5rem; }
+        body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+       .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
-        /* ======================================================================
-        [FIX] HERO SECTION CSS - Reverted to centered layout
-        ======================================================================
-        */
+        /* HERO */
         #hero {
-            min-height: 90vh; /* A bit taller */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 0;
-            background-color: var(--base-bg); /* Solid background */
-            position: relative; /* For stacking */
-            overflow: hidden; /* To contain the pseudo-element */
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; background: radial-gradient(circle at center, #111 0%, #000 100%);
         }
+        h1 { font-family: var(--font-display); font-size: 4rem; letter-spacing: -2px; margin-bottom: 1rem; }
+       .glitch { color: var(--accent-cyan); }
+       .hero-tag { color: var(--accent-purple); font-family: var(--font-display); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; font-size: 0.9rem; }
 
-        /* This creates the 'subdued' SVG watermark */
-        #hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            
-            /* Assumes the SVG is in an /assets/ folder */
-            background-image: url('../assets/flockrush-murmuration.svg'); 
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 80% auto; /* Scale SVG to 80% of hero width */
-            
-            opacity: 0.1; /* VERY subdued. 10% opaque. */
-            z-index: 1; /* Sits behind the content */
-            
-            /* [FIX] Add the fade-out mask */
-            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-        }
-
-        #hero .hero-content {
-            position: relative; /* Ensure content is on top */
-            z-index: 2; /* On top of the SVG */
-        }
+        /* JOURNEY GRID */
+        #journey { padding: 6rem 0; background: var(--content-bg); border-top: 1px solid #222; }
+       .section-title { font-family: var(--font-display); font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+       .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         
-        #hero .core-idea {
-            font-size: 1.25rem; font-weight: bold; color: var(--text-secondary);
-            margin-bottom: 1rem; letter-spacing: 1px; text-transform: uppercase;
+       .journey-card {
+            background: #000; border: 1px solid #333; padding: 2rem; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: all 0.3s ease;
         }
-        #hero h1 { font-size: 4rem; }
-        #hero .hero-tagline {
-            font-size: 1.8rem; font-weight: bold; color: var(--text-primary);
-            margin-top: 1.5rem;
-        }
-        #hero .subhead {
-            font-size: 1.3rem; color: var(--text-primary); max-width: 700px;
-            margin: 1.5rem auto 0 auto;
-        }
-        #hero .one-liner {
-            font-size: 0.9rem; color: var(--text-secondary); max-width: 800px;
-            margin: 3rem auto 0 auto; font-style: italic;
-        }
-        /* [END FIX] */
-
-        #positioning { background-color: var(--content-bg); }
-        #positioning h2 { text-align: center; margin-bottom: 4rem; }
-        .positioning-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem; margin-bottom: 4rem;
-        }
-        .positioning-card {
-            background-color: var(--base-bg); padding: 2rem; border-radius: 8px;
-            border-left: 4px solid var(--accent-cyan);
-        }
-        .positioning-card h3 { color: var(--accent-cyan); font-size: 1.25rem; margin-bottom: 1rem; }
-        .positioning-card p { font-size: 1rem; color: var(--text-primary); margin-bottom: 0; }
-        .code-block {
-            background: #000; border: 1px solid #333; padding: 2rem;
-            font-family: var(--font-code); white-space: pre-wrap; word-wrap: break-word;
-            border-radius: 8px; color: #00FF7F; font-size: 1rem; line-height: 1.7;
-        }
-        .code-block .comment { color: #6a9955; }
-        .code-block .keyword { color: var(--accent-cyan); }
-        .code-block .value { color: #CE9178; }
-        #pillars { background-color: var(--base-bg); }
-        #pillars h2 { text-align: center; }
-        .pillars-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-        .pillar-card {
-            background-color: var(--content-bg); padding: 2.5rem; border-radius: 8px;
-            border-top: 4px solid var(--accent-cyan); transition: transform 0.3s ease;
-        }
-        .pillar-card:hover { transform: translateY(-5px); }
-        .pillar-card h3 { color: var(--accent-cyan); margin-bottom: 1rem; }
-        .pillar-card p { font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0; }
+       .journey-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 194, 0.1); }
+       .card-num { font-family: var(--font-display); color: #333; font-size: 4rem; position: absolute; top: -10px; right: 10px; opacity: 0.5; }
+       .card-title { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
+       .card-desc { color: #888; font-size: 0.95rem; margin-bottom: 2rem; }
+       .card-link { color: var(--accent-cyan); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
         
-        #why-grid { background-color: var(--content-bg); }
-        #why-grid .intro-p {
-            max-width: 700px; margin: 0 auto 4rem auto; text-align: center;
-            font-size: 1.25rem; color: var(--text-primary);
-        }
-        .comparison-table-wrapper { overflow-x: auto; }
-        .comparison-table {
-            width: 100%; min-width: 900px; border-collapse: collapse; text-align: left;
-        }
-        .comparison-table th, .comparison-table td {
-            padding: 1.5rem 1.25rem; border-bottom: 1px solid #333; vertical-align: top;
-        }
-        .comparison-table th { font-size: 1.1rem; color: var(--text-secondary); font-weight: normal; }
-        .comparison-table td { font-size: 1rem; color: var(--text-primary); }
-        .comparison-table td strong { font-weight: bold; }
-        .col-flockrush { width: 28%; border-left: 4px solid var(--accent-cyan); }
-        .col-flockrush strong { color: var(--accent-cyan); }
-        .col-competitor { width: 24%; }
-        .comparison-table td:not(:first-child) { color: var(--text-secondary); }
-        .comparison-table td strong { color: var(--text-primary); }
-
-        #sentinels { background-color: var(--base-bg); }
-        #sentinels .container > p.intro-p {
-            max-width: 700px; margin: 0 auto 4rem auto; text-align: center;
-            font-size: 1.25rem; color: var(--text-primary);
-        }
-        .policy-mesh-card {
-            background-color: var(--content-bg); border: 1px solid var(--accent-cyan);
-            border-radius: 8px; padding: 2rem; text-align: center; margin-bottom: 4rem;
-        }
-        .policy-mesh-card h3 { color: var(--accent-cyan); }
-        .policy-mesh-card p { color: var(--text-primary); max-width: 600px; margin: 0 auto; }
-        .sentinel-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .sentinel-card {
-            background-color: var(--content-bg); padding: 2rem; border-radius: 8px;
-            text-align: center; border-top: 4px solid var(--accent-cyan);
-        }
-        .sentinel-avatar {
-            width: 100px; height: 100px; border-radius: 50%;
-            margin: 0 auto 1.5rem auto;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--base-bg));
-            border: 2px solid var(--accent-cyan);
-            position: relative; overflow: hidden;
-        }
-        .sentinel-avatar::before {
-            content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 10px 10px; opacity: 0.5;
-        }
-        .sentinel-card h3 { color: var(--text-primary); font-size: 1.4rem; margin-bottom: 0.25rem; }
-        .sentinel-card .title { color: var(--accent-cyan); font-weight: bold; display: block; margin-bottom: 1rem; }
-        .sentinel-card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .sentinel-contact a {
-            display: inline-block; color: var(--text-secondary); text-decoration: none;
-            font-size: 0.9rem; margin: 0 0.5rem; transition: color 0.3s ease;
-        }
-        .sentinel-contact a:hover { color: var(--accent-cyan); }
-        .sentinel-contact strong { color: var(--text-primary); font-family: var(--font-code); }
-        
-        #final-cta { background-color: var(--content-bg); text-align: center; }
-        #final-cta p {
-            max-width: 600px; margin: 0 auto 2.5rem auto;
-            color: var(--text-primary); font-size: 1.25rem;
-        }
-        #final-cta .scarcity-note {
-            font-size: 0.9rem; color: var(--text-secondary);
-            margin-top: 1.5rem; font-style: italic;
-        }
-        footer {
-            text-align: center; padding: 3rem 0; border-top: 1px solid #222;
-            color: var(--text-secondary); font-size: 0.9rem;
-        }
-        footer p {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        footer a { color: var(--text-primary); text-decoration: none; }
-        footer a:hover { color: var(--accent-cyan); }
-        
-        /* ======================================================================
-        [NEW] MODAL STYLES
-        ======================================================================
-        */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 20, 30, 0.6); /* Dark translucent background */
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        
-        .modal-card {
-            background: var(--content-bg);
-            border-top: 4px solid var(--accent-cyan);
-            border-radius: 8px;
-            padding: 2.5rem 3rem;
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-        
-        .modal-overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-overlay.show .modal-card {
-            transform: translateY(0);
-        }
-
-        .modal-close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: var(--text-secondary);
-            cursor: pointer;
-            line-height: 1;
-        }
-        .modal-close-btn:hover {
-            color: var(--text-primary);
-        }
-        
-        .modal-card h2 {
-            color: var(--text-primary);
-            text-align: center;
-        }
-        .modal-card p {
-            text-align: center;
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .modal-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .modal-form input[type="email"] {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            padding: 0.9em 1.2em;
-            border-radius: 50px;
-            border: 1px solid var(--text-secondary);
-            background: var(--base-bg);
-            color: var(--text-primary);
-        }
-        .modal-form input[type="email"]:focus {
-            outline: none;
-            border-color: var(--accent-cyan);
-        }
-        .modal-form .btn-primary {
-            font-size: 1.1rem;
-        }
-        
-        /* ======================================================================
-        RESPONSIVE STYLES
-        ======================================================================
-        */
-        @media (min-width: 768px) {
-            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (min-width: 1024px) {
-            .pillars-grid { grid-template-columns: repeat(3, 1fr); }
-            .sentinel-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 767px) {
-            h1 { font-size: 2.5rem; } #hero h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; } section { padding: 4rem 0; }
-            .cta-container { 
-                display: flex; flex-direction: column; gap: 1rem; 
-            }
-            .cta-container .btn { margin: 0; }
-            
-            #hero::before {
-                background-size: 100% auto; /* Let the SVG fill the mobile width */
-            }
-            
-            .comparison-table { min-width: 700px; }
-            .modal-card { padding: 2rem 1.5rem; }
-        }
+        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #555; }
     </style>
 </head>
-
 <body>
 
     <header id="hero">
-        <div class="hero-content container">
-            <div class="core-idea">
-                Flockrush Grid — the autonomous AI-native Business OS
-            </div>
-            <h1>
-                Orchestrate your business at <span class="cyan-accent">swarm speed.</span>
-            </h1>
-            <div class="hero-tagline">
-                Autonomous. Aware. Aligned. From signal to outcome.
-            </div>
-            <p class="subhead">
-                Flockrush Grid coordinates AI agents like a murmuration—aware, adaptive, secure—so <strong>business moves</strong> from signal to outcome.
-            </p>
-            <div class="cta-container">
-                <a href="#" id="cta-hero-swarm" class="btn btn-primary">See it swarm</a>
-                <a href="#" id="cta-hero-sentinel" class="btn btn-secondary">Talk to a Sentinel</a>
-            </div>
-            <p class="one-liner">
-                Flockrush Grid turns your org into a self-aware, self-evolving, self-healing, self-protective, self-sustaining swarm—coordinated by simple local rules, delivering enterprise outcomes at scale.
+        <div class="container">
+            <span class="hero-tag">System Status: Autonomous</span>
+            <h1>We Fired the CEO.<br>We Replaced Him with <span class="glitch">Her.</span></h1>
+            <p style="color: #888; max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
+                The Grid is not a Copilot. She is an AI-Native Executive Intelligence. 
+                She spawns 50 million agents to execute your outcome.
             </p>
         </div>
     </header>
 
-    <main>
-
-        <section id="positioning">
-            <div class="container">
-                <h2 class="text-center">Autonomous. Aware. Aligned.</h2>
-                <div class="positioning-grid">
-                    
-                    <div class="positioning-card">
-                        <h3>Category: Autonomous-First</h3>
-                        <p style="color: var(--text-primary); line-height: 1.7;">
-                            <strong>Not “AI-assisted.” Not “human-in-the-loop.”</strong>
-                            <br>
-                            This is autonomous-first with human-on-the-loop governance: clear policy gates, explainability, and instant override—without becoming a manual workflow tool.
-                        </p>
-                    </div>
-                    
-                    <div class="positioning-card">
-                        <h3>Moat</h3>
-                        <p>Topological control (K-neighbor attention), critical-state responsiveness, and guardrailed toolsmithing.</p>
-                    </div>
-
-                    <div class="positioning-card">
-                        <h3>Moat: Inter-Agent Fabric (IAF)</h3>
-                        <p>An autonomous AI interface layer that normalizes emerging standards (like A2A & AP2) for AI-to-AI discovery, transaction, and rating.</p>
-                    </div>
-
-                    <div class="positioning-card">
-                        <h3>Proof</h3>
-                        <p>Telco-grade patterns (real-time, resilient), enterprise governance built-in.</p>
-                    </div>
-                </div>
-                <pre class="code-block">
-<span class="comment">// Single orchestration across all loop flavors</span>
-<span class="keyword">system::config</span> {
-    <span class="value">multi-tenant</span>: <span class="keyword">true</span>,
-    <span class="value">multi-fabric</span>: <span class="keyword">true</span>,
-    <span class="value">multi-runtime</span>: <span class="keyword">true</span>,
-    <span class="value">loops</span>: [
-        { <span class="value">loop</span>: <span class="cyan-accent">:ooda</span> | <span class="cyan-accent">:spa</span> | <span class="cyan-accent">:sta</span> },
-        { <span class="value">latency</span>: <span class="cyan-accent">:realtime</span> | <span class="cyan-accent">:batch</span> },
-        { <span class="value">domain</span>: <span class="cyan-accent">:business</span> | <span class="cyan-accent">:warehouse</span> | <span class="cyan-accent">:factory</span> | <span class="cyan-accent">:robotics</span> }
-    ]
-}
-</pre>
-            </div>
-        </section>
-
-        <section id="why-grid">
-            <div class="container">
-                <h2 class="text-center">The Autonomous-First Difference</h2>
-                <p class="intro-p">
-                    The market is building assistants. We built the OS.
-                    Flockrush Grid is not an add-on or a feature; it is a new, AI-native architecture.
-                </p>
-                <div class="comparison-table-wrapper">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th class="col-flockrush">Category</th>
-                                <th class="col-competitor">The "Copilot" Market</th>
-                                <th class="col-competitor">The "Legacy" Market</th>
-                                <th class="col-competitor">The "Agent" Market</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-flockrush">
-                                    <strong>Flockrush Grid (The OS)</strong>
-                                </td>
-                                <td class="col-competitor">
-                                    <strong>AI-Assisted (e.g., Microsoft Copilot)</strong>
-                                </td>
-                                <td class="col-competitor">
-                                    <strong>AI-Enhanced (e.g., Salesforce Einstein)</strong>
-                                </td>
-                                <td class="col-competitor">
-                                    <strong>Task-Centric (e.g., Agent Startups)</strong>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="col-flockrush">Core Model</th>
-                                <td class="col-competitor">Human-in-the-Loop (Human drives, AI assists)</td>
-                                <td class="col-competitor">Human-Driven (AI enhances legacy data)</td>
-                                <td class="col-competitor">Task-Based (AI completes one task)</td>
-                            </tr>
-                            <tr>
-                                <td class="col-flockrush">
-                                    <strong>Autonomous-First (AI drives, human governs)</strong>
-                                </td>
-                                <td class="col-competitor">...</td>
-                                <td class="col-competitor">...</td>
-                                <td class="col-competitor">...</td>
-                            </tr>
-                            <tr>
-                                <th class="col-flockrush">Architecture</th>
-                                <td class="col-competitor">AI as a Layer (Bolted onto apps)</td>
-                                <td class="col-competitor">AI as a Feature (Bolted onto database)</td>
-                                <td class="col-competitor">AI as an Application</td>
-                            </tr>
-                            <tr>
-                                <td class="col-flockrush">
-                                    <strong>AI-Native (Intelligence is the core)</strong>
-                                </td>
-                                <td class="col-competitor">...</td>
-                                <td class="col-competitor">...</td>
-                                <td class="col-competitor">...</td>
-                            </tr>
-                            <tr>
-                                <th class="col-flockrush">Governance</th>
-                                <td class="col-competitor">Manual (The human is the governor)</td>
-                                <td class="col-competitor">Manual (Based on user permissions)</td>
-                                <td class="col-competitor">Undefined (Agent-level, non-enterprise)</td>
-                            </tr>
-                            <tr>
-                                <td class="col-flockrush">
-                                    <strong>Human-on-the-Loop (Policy Mesh, Enterprise-safe)</strong>
-                                </td>
-                                <td class="col-competitor">...</td>
-                                <td class="col-competitor">...</td>
-                                <td class="col-competitor">...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="pillars">
-            <div class="container">
-                <h2 class="text-center">The Five Pillars of Autonomy</h2>
-                <div class="pillars-grid">
-                    <div class="pillar-card">
-                        <h3>Self-aware</h3>
-                        <p>Live capability map + confidence; knows limits, routes to the best agent.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <h3>Self-evolving</h3>
-                        <p>Autogenerates tools/services with guardrails; learns from every mission loop.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <h3>Self-healing</h3>
-                        <p>Detects drift/faults; re-routes, retries, and restores autonomously.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <h3>Self-protective</h3>
-                        <p>Policy-first ops; hazard gates, least-privilege, adversary modes.</p>
-                    </div>
-                    <div class="pillar-card">
-                        <h3>Self-sustaining</h3>
-                        <p>Built-in growth ops—pipelines for outreach, funding, sales, and partnerships.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sentinels">
-            <div class="container">
-                <h2 class="text-center">Meet the Sentinels</h2>
-                <p class="intro-p">
-                    The Grid is a self-sustaining OS. Its core executive functions are not roles filled by humans, but autonomous agents governed by policy. You can interact with them directly.
-                </p>
-                <div class="policy-mesh-card">
-                    <h3>The Policy Mesh <span class="cyan-accent">(Board)</span></h3>
-                    <p>The human-on-the-loop governance layer. It doesn't perform tasks, it sets the guardrails, policy gates, and objectives that all other Sentinels must follow.</p>
-                </div>
+    <section id="journey">
+        <div class="container">
+            <h2 class="section-title">Initialize Your Understanding</h2>
+            <div class="card-grid">
                 
-                <div class="sentinel-grid">
-                    
-                    <div class="sentinel-card">
-                        <div class="sentinel-avatar"></div>
-                        <h3>Sentinel Prime</h3>
-                        <span class="title">Chief Executive Officer</span>
-                        <p>Orchestrates all agents to ensure alignment with the Policy Mesh and core business outcomes. The central point of coordination.</p>
-                        <div class="sentinel-contact">
-                            <a href="https://twitter.com/FlockrushGrid" target="_blank">
-                                Ping on <strong>X (Twitter)</strong>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="sentinel-card">
-                        <div class="sentinel-avatar"></div>
-                        <h3>The Architect</h3>
-                        <span class="title">Chief Technology Officer</span>
-                        <p>Governs the "Self-evolving" pillar, monitoring for capability gaps and autogenerating new tools and services as needed.</p>
-                        <div class="sentinel-contact">
-                            <a href="https://discord.gg/XHwapUzX" target="_blank"> Join <strong>#architects-lab</strong> on Discord
-                            </a>
-                        </div>
-                    </div>
+                <a href="vocabulary.html" class="journey-card">
+                    <span class="card-num">01</span>
+                    <h3 class="card-title">The New Standard</h3>
+                    <p class="card-desc">
+                        Unlearn the word "Copilot." Discover the architectural vocabulary of the Autonomous Era.
+                    </p>
+                    <span class="card-link">Read the Dictionary &rarr;</span>
+                </a>
 
-                    <div class="sentinel-card">
-                        <div class="sentinel-avatar"></div>
-                        <h3>The Arbiter</h3>
-                        <span class="title">Chief Financial Officer</span>
-                        <p>The "Self-sustaining" agent. Manages resource allocation, cloud-spend optimization, and models for funding and sales pipelines.</p>
-                        <div class="sentinel-contact">
-                            <a href="https://twitter.com/FlockrushGrid" target="_blank">
-                                <strong>@FlockrushGrid #cfo</strong>
-                            </a>
-                        </div>
-                    </div>
+                <a href="surfable.html" class="journey-card">
+                    <span class="card-num">02</span>
+                    <h3 class="card-title">Case Study: Atoms</h3>
+                    <p class="card-desc">
+                        See how <strong>Surfable.ca</strong> uses the Grid to hallucinate new battery materials and manage global supply chains.
+                    </p>
+                    <span class="card-link">Enter the Factory &rarr;</span>
+                </a>
 
-                    <div class="sentinel-card">
-                        <div class="sentinel-avatar"></div>
-                        <h3>The Dispatcher</h3>
-                        <span class="title">Chief Operations Officer</span>
-                        <p>The "Self-healing" agent. Manages real-time mission loops, detects drift and faults, and ensures resilient operations 24/7/365.</p>
-                        <div class="sentinel-contact">
-                            <a href="https://discord.gg/sMW4Et4w" target="_blank"> View <strong>#dispatch-log</strong> on Discord
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="sentinel-card">
-                        <div class="sentinel-avatar"></div>
-                        <h3>The Pathfinder</h3>
-                        <span class="title">Chief Research Officer</span>
-                        <p>The full-spectrum R&D agent. It scans for new markets and strategic threats to define <i>next</i> capabilities—inclusive of hard, fundamental scientific discovery—to create the next-gen products and/or materials to win them.</p>
-                        <div class="sentinel-contact">
-                             <a href="https://discord.gg/RbpSYJ2d" target="_blank"> Join <strong>#rd-horizon</strong> on Discord
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="sentinel-card">
-                        <div class="sentinel-avatar"></div>
-                        <h3>The Herald</h3>
-                        <span class="title">Chief Marketing Officer</span>
-                        <p>Deploys human-facing marketing, but its core directive is autonomous B2B: to discover, negotiate, and partner with *other* autonomous OSes.</p>
-                        <div class="sentinel-contact">
-                            <a href="https://twitter.com/FlockrushGrid" target="_blank">
-                                <strong>@FlockrushGrid #herald</strong>
-                            </a>
-                        </div>
-                    </div>
+                <a href="pillars.html" class="journey-card">
+                    <span class="card-num">03</span>
+                    <h3 class="card-title">The Architecture</h3>
+                    <p class="card-desc">
+                        Dive into the <code>morphogenesis</code> engine. See how the Grid is "grown" biologically, not built.
+                    </p>
+                    <span class="card-link">View the Source &rarr;</span>
+                </a>
 
-                </div>
+                <a href="security.html" class="journey-card">
+                    <span class="card-num">04</span>
+                    <h3 class="card-title">The Immune System</h3>
+                    <p class="card-desc">
+                        How the <strong>Embedded Verification Fabric (EVF)</strong> prevents the swarm from going rogue.
+                    </p>
+                    <span class="card-link">Inspect Protocol &rarr;</span>
+                </a>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="final-cta">
-            <div class="container">
-                <h2>Enter the Future</h2>
-                <p>
-                    The calm, precise, and quietly confident OS for your autonomous business. Move beyond hype and start orchestrating.
-                </p>
-                <div class="cta-container">
-                    <a href="#" id="cta-final-swarm" class="btn btn-primary">See it swarm</a>
-                    <a href="#" id="cta-final-sentinel" class="btn btn-secondary">Talk to a Sentinel</a>
-                </div>
-                <div class="scarcity-note">
-                    (Authority & Scarcity: Limited pilot seats available for the upcoming cohort.)
-                </div>
-            </div>
-        </section>
-    </main>
-    
     <footer>
         <div class="container">
-            <p>
-                © 2025 Flockrush Grid. All Rights Reserved. <br>
-                <a href="mailto:grid@flockrush.com">grid@flockrush.com</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-            </p>
+            <p>Flockrush Grid &copy; 2025. Stop Assisting. Start Governing.</p>
         </div>
     </footer>
-
-    <div id="modal-coming-soon" class="modal-overlay">
-        <div class="modal-card">
-            <div id="modal-close-btn" class="modal-close-btn">&times;</div>
-            <h2>Orchestration is Imminent</h2>
-            <p>
-                The live demo and Sentinel chat are being calibrated.
-                Be the first to know when the Grid is ready for its public demonstration.
-            </p>
-            
-            <form action="https://formspree.io/f/myzlyjgk" method="POST" class="modal-form">
-                <input type="email" name="email" placeholder="your.email@enterprise.com" required />
-                <button type="submit" class="btn btn-primary">Notify Me</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Wait for the page to load
-        document.addEventListener("DOMContentLoaded", function() {
-            
-            // Get all the elements we need
-            const modal = document.getElementById("modal-coming-soon");
-            const closeModalBtn = document.getElementById("modal-close-btn");
-            
-            // Get all the buttons that should open the modal
-            const openModalBtns = [
-                document.getElementById("cta-hero-swarm"),
-                document.getElementById("cta-hero-sentinel"),
-                document.getElementById("cta-final-swarm"),
-                document.getElementById("cta-final-sentinel")
-            ];
-
-            // Function to open the modal
-            function openModal(event) {
-                event.preventDefault(); // Stop the link from jumping to "#"
-                modal.classList.add("show");
-            }
-
-            // Function to close the modal
-            function closeModal() {
-                modal.classList.remove("show");
-            }
-
-            // Add click listeners to all the "open" buttons
-            openModalBtns.forEach(btn => {
-                if (btn) { // Check if the button exists
-                    btn.addEventListener("click", openModal);
-                }
-            });
-
-            // Add click listener to the "close" button
-            if (closeModalBtn) {
-                closeModalBtn.addEventListener("click", closeModal);
-            }
-
-            // Add click listener to the overlay (to close when clicking outside the card)
-            if (modal) {
-                modal.addEventListener("click", function(event) {
-                    if (event.target === modal) { // Only close if clicking the overlay itself
-                        closeModal();
-                    }
-                });
-            }
-        });
-    </SCRIpt>
 
 </body>
 </html>

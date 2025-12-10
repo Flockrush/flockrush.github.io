@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <meta name="keywords" 
+        content="autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
+    <title>Embedded Verification Fabric (EVF) | Flockrush Grid</title>
+    
+    <meta name="description" 
+        content="The Grid's Immune System. How Embedded Verification Fabric (EVF) provides cryptographic, telco-grade security for autonomous agent swarms." />
+
+    <link rel="canonical" href="https://www.flockrush.com/grid/security" /> 
+    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
+
+    <style>
+        :root { --base-bg: #050505; --accent-red: #FF0055; --text-main: #fff; --font-mono: "Courier New", monospace; }
+        body { background: var(--base-bg); color: var(--text-main); font-family: "Helvetica Neue", sans-serif; margin: 0; }
+       .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        h1 { font-size: 3.5rem; font-family: var(--font-mono); margin-bottom: 1rem; }
+       .subtitle { color: #888; font-size: 1.2rem; max-width: 600px; margin-bottom: 4rem; }
+
+       .diagram { border: 1px dashed #333; padding: 4rem; text-align: center; margin: 3rem 0; background: #0a0a0a; position: relative; overflow: hidden; }
+       .diagram::before { content: "EVF_ACTIVE"; position: absolute; top: 1rem; right: 1rem; color: var(--accent-red); font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.7; }
+        
+       .layer { background: #111; border-left: 4px solid var(--accent-red); padding: 2rem; margin-bottom: 2rem; }
+       .layer h3 { font-family: var(--font-mono); color: #fff; margin-bottom: 0.5rem; }
+       .layer p { color: #888; line-height: 1.6; }
+
+        nav { padding: 2rem 0; border-bottom: 1px solid #222; }
+       .back-link { color: #666; text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; }
+       .back-link:hover { color: var(--accent-red); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container" style="padding-top:0; padding-bottom:0;">
+        <a href="index.html" class="back-link">< STATUS: RETURN TO GRID</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>The Immune System.</h1>
+    <p class="subtitle">
+        Security cannot be an afterthought. In the Grid, it is the <span style="color:var(--accent-red)">Embedded Verification Fabric (EVF)</span>.
+    </p>
+
+    <div class="diagram">
+        <h3 style="font-family:var(--font-mono); font-size: 2rem; color:var(--accent-red);">&lt;-- grid_evf --&gt;</h3>
+        <p style="color: #666; margin-top: 1rem;">Every line of code, every agent action, and every policy change is cryptographically attested in real-time.</p>
+    </div>
+
+    <h2 style="margin-bottom: 2rem;">Why "Bolted On" Governance Fails</h2>
+    <p style="color: #aaa; margin-bottom: 4rem; line-height: 1.8;">
+        Legacy systems try to secure AI with external firewalls or "human review queues." This is too slow for a swarm of 50 million agents. If a bad actor injects a prompt, the damage is done before the human sees it. We baked security into the kernel.
+    </p>
+
+    <div class="layer">
+        <h3>1. Grid Attestor</h3>
+        <p>Uses cryptographic signatures to verify the "chain of thought" of every agent. If an agent's logic drifts from the signed Policy Mesh, the Attestor kills the process instantly. No rogue agents.</p>
+    </div>
+
+    <div class="layer">
+        <h3>2. Grid Immune</h3>
+        <p>A specialized sub-swarm that attacks our own agents. It constantly runs "Red Team" simulations (adversarial prompts) against the live system to find weaknesses before an attacker does.</p>
+    </div>
+
+    <div class="layer">
+        <h3>3. Telco-Grade Resilience</h3>
+        <p>Built on the BEAM VM (Erlang/Elixir), the Grid inherits the "nine nines" reliability of telecom infrastructure. We isolate memory states so a compromised agent cannot infect the rest of the swarm.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+    <meta name="keywords" 
+        content="autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush Grid, self-evolving OS, not a copilot" />
+    <title>Surfable: The Autonomous Factory | Flockrush Grid</title>
+    
+    <meta name="description" 
+        content="How Surfable uses the Flockrush Grid to hallucinate new battery materials and autonomously manage global supply chains." />
+
+    <link rel="canonical" href="https://www.flockrush.com/grid/surfable" /> 
+    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
+    
+    <style>
+        :root {
+            --base-bg: #050505; --content-bg: #0A0F14;
+            --accent-cyan: #00FFC2; --accent-purple: #BD00FF;
+            --text-primary: #EDEDED; --text-dim: #888;
+            --font-mono: "Courier New", monospace; --font-sans: "Helvetica Neue", sans-serif;
+        }
+        body { background: var(--base-bg); color: var(--text-primary); font-family: var(--font-sans); margin: 0; }
+       .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* HEADER */
+        header { height: 90vh; display: flex; align-items: center; background: radial-gradient(circle at 60% 50%, #1a1a1a 0%, #000 100%); }
+        h1 { font-size: 4rem; letter-spacing: -2px; line-height: 1; margin-bottom: 1rem; font-family: var(--font-mono); }
+       .tag { color: var(--accent-cyan); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 1rem; }
+        
+        /* CODE */
+       .code-panel { background: #000; border: 1px solid #333; padding: 2rem; border-radius: 4px; border-left: 4px solid var(--accent-purple); font-family: var(--font-mono); font-size: 0.9rem; overflow-x: auto; margin-top: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+       .kwd { color: var(--accent-purple); }.str { color: var(--accent-cyan); }.com { color: #555; font-style: italic; }
+
+        /* LAYOUT */
+       .split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 6rem 0; border-bottom: 1px solid #222; }
+       .stat-box { border: 1px solid #333; padding: 2rem; text-align: center; background: #080808; }
+       .stat-num { font-size: 3rem; color: var(--accent-cyan); font-weight: 700; display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); }
+       .stat-label { color: #666; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; }
+        
+        /* NAV */
+        nav { padding: 2rem 0; border-bottom: 1px solid #222; }
+       .back-link { color: #666; text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; }
+       .back-link:hover { color: var(--accent-cyan); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="index.html" class="back-link">< STATUS: RETURN TO GRID</a>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <span class="tag">System Instance: SURFABLE_ENERGY_CORP</span>
+        <h1>We Don't Just Manage Factories.<br>We <span style="color:var(--accent-purple)">Hallucinate</span> New Materials.</h1>
+        <p style="font-size: 1.5rem; color: var(--text-dim); max-width: 700px;">
+            How Surfable uses the Grid to run a "Tesla-style" autonomous battery plant—from molecular discovery to global material procurement.
+        </p>
+    </div>
+</header>
+
+<section class="container split">
+    <div>
+        <h2 style="font-size: 2.5rem; font-family: var(--font-mono);">The "Chief Scientist" Sentinel</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #ccc;">
+            Traditional R&D is slow. Humans hypothesize, design experiments, wait for lab time, and analyze results.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #ccc;">
+            <strong>The Surfable Approach:</strong> The <code>grid_scientist</code> Sentinel runs a continuous "Materials Scientist Simulator." It uses Generative AI to hallucinate novel graphene-aluminum structures, simulates their thermal stability using physics engines (DFT), and dispatches the winners to robotic wet-labs for synthesis.
+        </p>
+    </div>
+    <div class="code-panel">
+<pre>
+<span class="com"># --- R&D AUTONOMY POLICY ---</span>
+<span class="kwd">sentinel</span> <span class="str">:chief_scientist</span> <span class="kwd">do</span>
+  <span class="kwd">role</span> <span class="str">:material_architect</span>
+  <span class="kwd">objectives</span> [<span class="str">:energy_density</span>, <span class="str">:thermal_safety</span>]
+<span class="kwd">end</span>
+
+<span class="kwd">policy</span> <span class="str">"Molecular Discovery"</span> <span class="kwd">do</span>
+  <span class="kwd">rule</span> <span class="str">"Generative Synthesis"</span> <span class="kwd">do</span>
+    <span class="kwd">trigger</span> <span class="str">:lab_capacity_available</span>
+    
+    <span class="com"># Constraint: Physics Safety Check</span>
+    <span class="kwd">gate</span> <span class="str">:thermal_simulation</span> <span class="kwd">do</span>
+      <span class="kwd">check</span> <span class="str">:runaway_temp</span>, <span class="kwd">min:</span> 200.0 <span class="com"># Celsius</span>
+    <span class="kwd">end</span>
+
+    <span class="kwd">action</span> <span class="str">:dispatch_robot_arm</span>
+  <span class="kwd">end</span>
+<span class="kwd">end</span>
+</pre>
+    </div>
+</section>
+
+<section class="container split">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="stat-box">
+            <span class="stat-num">24/7</span>
+            <span class="stat-label">Market Watch</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-num">5ms</span>
+            <span class="stat-label">Bid Latency</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Ethical Audit</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Human Emails</span>
+        </div>
+    </div>
+    <div>
+        <h2 style="font-size: 2.5rem; font-family: var(--font-mono);">The Supply Chain Immune System</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #ccc;">
+            The <strong>Ops Sentinel</strong> doesn't wait for a shortage. It monitors global material spot prices, geopolitical shipping risks, and supplier ethics ratings in real-time.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.6; color: #ccc;">
+            When the price dips below the moving average, it executes the purchase order via ERP integration. If a port strikes, it autonomously books air freight. No email chains. Just execution.
+        </p>
+    </div>
+</section>
+
+<footer style="padding: 4rem 0; text-align: center; color: #555;">
+    <p>© 2025 Flockrush Grid. Moving Atoms at the Speed of Code.</p>
+</footer>
+
+</body>
+</html>

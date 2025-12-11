@@ -8,9 +8,49 @@
         content="autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush, Policy Mesh" />
     <title>Flockrush: Governing the Autonomous Enterprise</title>
     
-    <meta name="description" content="Flockrush is the organization building the autonomous-first future. We pivoted from 'AI-assisted' tools to building the 'Autonomous-First' OS. We are the Human-on-the-Loop Policy Mesh." />
-    <link rel="canonical" href="https://www.flockrush.com/" /> 
-    <link rel="icon" type="image/svg+xml" href="./assets/flockrush/favicon.svg" />
+    <meta name="description" content="Flockrush Grid is the first true autonomous-first business OS. Built AI-native with human-on-the-loop governance, it is not an AI-assistant or copilot. It is a self-aware, self-evolving system. Enter the future." />
+    <link rel="canonical" href="https://www.flockrush.com" /> 
+    
+    <meta property="og:title" content="Flockrush: Governing the Autonomous Enterprise" />
+    <meta property="og:description" content="Not 'AI-assisted.' Autonomous-first with human-on-the-loop governance." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flockrush.com/" />
+    <meta property="og:image" content="../assets/flockrush/flockrush-og.webp" /> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flockrush: Governing the Autonomous Enterprise" />
+    <meta name="twitter:description" content="Architecting: OS for Autonomy®" />
+    <meta name="twitter:image" content="../assets/flockrush/flockrushgrid-og.webp" />
+    <link rel="icon" type="image/png" href="../assets/flockrush/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/flockrush/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/flockrush/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/flockrush/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/flockrush/site.webmanifest" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Flockrush Grid: ABOS",
+      "alternateName": "Autonomous Business OS",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud-based SaaS",
+      "keywords": "autonomous-first, AI-native business OS, human-on-the-loop, autonomous agents, self-evolving OS, not a copilot",
+      "description": "Flockrush Grid is the first true autonomous-first, AI-native Business OS. It is not an 'AI-assistant' or 'copilot.' It is a self-aware, self-evolving, self-healing, and self-protective system built for enterprise, using human-on-the-loop governance. It coordinates AI agents like a murmuration to move business from signal to outcome at swarm speed.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.flockrush.com"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Flockrush",
+        "url": "https://www.flockrush.com",
+        "sameAs": [
+          "https://twitter.com/FlockrushGrid",
+          "https://github.com/FlockrushGrid" 
+        ]
+      }
+    }
+    </script>  
     
     <style>
         :root {
@@ -26,13 +66,15 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-      .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
         /* HERO SECTION */
         header {
-            min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            min-height: 90dvh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; background: radial-gradient(circle at 50% 30%, #1a2525 0%, #050505 70%);
             position: relative;
+            padding: 4rem 0; /* Increased padding */
         }
         header::before {
             content: ""; position: absolute; width: 100%; height: 100%; top: 0; left: 0;
@@ -50,13 +92,30 @@
             font-size: 1.4rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 3rem; position: relative; z-index: 2; 
         }
         
-      .btn-group { display: flex; gap: 1.5rem; justify-content: center; position: relative; z-index: 2; }
+        /* FIX: Added wrap so buttons stack on mobile */
+      .btn-group { 
+          display: flex; 
+          gap: 1.5rem; 
+          justify-content: center; 
+          position: relative; 
+          z-index: 2; 
+          flex-wrap: wrap; /* Critical for mobile */
+      }
       .btn { 
             padding: 1rem 2.5rem; border-radius: 2px; font-family: var(--font-display); font-weight: bold; font-size: 1rem; letter-spacing: 1px;
             text-transform: uppercase; border: 1px solid var(--accent-cyan); color: var(--accent-cyan);
             transition: all 0.3s ease;
+            text-align: center;
         }
       .btn:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 30px var(--accent-cyan); }
+      
+      /* New style for the secondary button you added */
+      .btn-secondary {
+          border-color: #444; color: #aaa;
+      }
+      .btn-secondary:hover {
+          border-color: #fff; color: #fff; background: transparent; box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      }
 
         /* MANIFESTO SECTION */
         #manifesto { padding: 8rem 0; background: var(--base-bg); border-top: 1px solid #222; }
@@ -83,8 +142,8 @@
       .phase-title { font-size: 2rem; margin-bottom: 1rem; color: #fff; }
       .phase-desc { max-width: 600px; color: #aaa; font-size: 1.1rem; }
 
-        /* PHILOSOPHY GRID */
-        #philosophy { padding: 8rem 0; text-align: center; }
+      /* PHILOSOPHY GRID */
+      #philosophy { padding: 8rem 0; text-align: center; }
       .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; text-align: left; margin-top: 4rem; }
       .phil-card { 
             background: #090909; border: 1px solid #222; padding: 3rem; transition: transform 0.3s; 
@@ -92,14 +151,30 @@
       .phil-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); }
       .phil-icon { font-family: var(--font-display); font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 1.5rem; display: block; }
 
-        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #444; font-family: var(--font-display); font-size: 0.9rem; }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-          .grid-2 { grid-template-columns: 1fr; }
+      footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #444; font-family: var(--font-display); font-size: 0.9rem; }
+
+      /* MOBILE MEDIA QUERIES */
+      @media (max-width: 768px) {
+          h1 { font-size: 2.8rem; } 
+          .hero-sub { font-size: 1.1rem; }
+          
+          /* Stack buttons on mobile */
+          .btn { width: 100%; display: block; margin-bottom: 0.5rem; } 
+          
+          .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+          
+          /* Prevent Philosophy header from being huge */
+          #philosophy h2 { font-size: 2rem !important; }
+          
           .timeline { padding-left: 2rem; }
           .phase-card::before { left: -2.35rem; }
-        }
+          
+          .quote-box { padding-left: 1.5rem; border-left-width: 2px; }
+          .quote-text { font-size: 1.4rem; }
+          
+          #manifesto, #philosophy, #evolution { padding: 4rem 0; }
+          .container { padding: 0 1.5rem; }
+      }
     </style>
 </head>
 <body>
@@ -120,7 +195,7 @@
             <div class="btn-group">
                 <a href="./grid/index.html" class="btn">Enter The Grid</a>
                 <a href="./grid/semantics.html" class="btn btn-secondary">Read the Research</a>
-                <a href="https://github.com/Flockrush" class="btn" style="border-color:#333; color:#aaa;">Research</a>
+                <a href="https://github.com/Flockrush" class="btn" style="border-color:#333; color:#aaa;">GitHub</a>
             </div>
         </div>
     </header>
@@ -170,6 +245,7 @@
                     <p class="phase-desc">
                         We realized that a swarm of agents is not a workforce; it is a <strong>sovereign capability</strong>. That capability needs a <strong>Governance Mesh</strong>. So we built Flockrush Grid.
                     </p>
+                    
                 </div>
 
             </div>
@@ -190,6 +266,7 @@
                     <p style="color:#888;">
                         The human is a process worker. A fallible operator who slows the machine down to the speed of a mouse click.
                     </p>
+                    
                 </div>
                 <div class="phil-card" style="border-color:var(--accent-cyan);">
                     <span class="phil-icon">&lt;Human-ON-the-Loop /&gt;</span>

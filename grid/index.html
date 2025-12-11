@@ -91,15 +91,35 @@
        .card-title { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
        .card-desc { color: #888; font-size: 0.95rem; margin-bottom: 2rem; }
        .card-link { color: var(--accent-cyan); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        
+        /* CTA Form */
+        #cta-section {
+            background: #000; padding: 6rem 0; border-top: 1px solid #333; border-bottom: 1px solid #333; text-align: center;
+        }
+       .cta-form {
+            display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;
+            max-width: 600px; margin-left: auto; margin-right: auto;
+        }
+       .cta-input {
+            flex: 1; padding: 1rem; background: #111; border: 1px solid #333; color: #fff;
+            font-family: var(--font-display); font-size: 1rem;
+        }
+       .cta-input:focus { outline: none; border-color: var(--accent-cyan); }
+       .cta-btn {
+            padding: 1rem 2rem; background: var(--accent-cyan); color: #000; border: none;
+            font-family: var(--font-display); font-weight: bold; text-transform: uppercase; cursor: pointer;
+            transition: 0.3s;
+        }
+       .cta-btn:hover { color: var(--accent-purple); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 194, 0.1); }
         footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #555; }
-
         /* MOBILE RESPONSIVENESS */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; } /* Shrink huge text */
             .card-grid { grid-template-columns: 1fr; } /* Force single column stack */
             .journey-card { min-height: auto; }
+            .cta-form { flex-direction: column; }
+            .cta-btn { width: 100%; }
         }
+
     </style>
 </head>
 <body>
@@ -166,7 +186,22 @@
             </div>
         </div>
     </section>
+    <section id="cta-section">
+            <div class="container">
+                <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">
+                    Initialize Sequence.
+                </h2>
+                <p style="color: #888; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+                    We are onboarding select enterprises for the Pilot Program.<br>
+                    <span style="color: var(--accent-cyan);">Do not apply if you are looking for a chatbot/copilot.</span>
+                </p>
 
+                <form action="https://formspree.io/f/myzlyjgk" method="POST" class="cta-form">
+                    <input type="email" name="email" class="cta-input" placeholder="your.email@enterprise.com" required />
+                    <button type="submit" class="cta-btn">Access The Grid</button>
+                </form>
+            </div>
+        </section>
     <footer>
         <div class="container">
             OS for Autonomy®<br>

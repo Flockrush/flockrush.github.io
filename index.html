@@ -1,354 +1,219 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    
-    <title>Flockrush: Governing the Autonomous Enterprise.</title>
-    
-    <meta name="description" 
-        content="Flockrush is the organization building the autonomous-first future. We learned from 'AI-assisted' (Phase 1) to build the 'Autonomous-First' OS (Phase 2). We are the Human-on-the-Loop Policy Mesh." />
-    
+  
     <meta name="keywords" 
-        content="Flockrush, AI Governance, Autonomous-First, Human-on-the-Loop, Autonomous Enterprise, AI-native OS, Flockrush Grid" />
-
-    <link rel="canonical" href="https://www.flockrush.com/" />
-
-    <meta property="og:title" content="Flockrush: Governing the Autonomous Enterprise." />
-    <meta property="og:description" content="We had to build the 'AI-assisted' future to realize the 'Autonomous-First' one. We are the Policy Mesh." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.flockrush.com/" />
-    <meta property="og:image" content="./assets/flockrush/flockrush-og.webp" /> 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Flockrush" />
-    <meta name="twitter:title" content="Flockrush: Governing the Autonomous Enterprise." />
-    <meta name="twitter:description" content="We are the Human-on-the-Loop Policy Mesh for the autonomous-first future." />
-    <meta name="twitter:image" content="./assets/flockrush/flockrush-og.webp" />
-    <link rel="icon" type="image/png" href="./assets/flockrush/favicon-96x96.png" sizes="96x96" />
+        content="autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush, Policy Mesh" />
+    <title>Flockrush: Governing the Autonomous Enterprise</title>
+    
+    <meta name="description" content="Flockrush is the organization building the autonomous-first future. We pivoted from 'AI-assisted' tools to building the 'Autonomous-First' OS. We are the Human-on-the-Loop Policy Mesh." />
+    <link rel="canonical" href="https://www.flockrush.com/" /> 
     <link rel="icon" type="image/svg+xml" href="./assets/flockrush/favicon.svg" />
-    <link rel="shortcut icon" href="./assets/flockrush/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/flockrush/apple-touch-icon.png" />
-    <link rel="manifest" href="./assets/flockrush/site.webmanifest" />
+    
     <style>
         :root {
-            --base-bg: #0A0E1A;         /* Near Black / Midnight Blue */
-            --content-bg: #120029;     /* Dark Violet (from original site) */
-            --accent-cyan: #00CED1;    /* Electric Cyan (New Accent) */
-            --text-primary: #FFFFFF;   /* Pure White */
-            --text-secondary: #8C90A3; /* Cool Gray */
-            --font-display: "Avenir Next LT Pro", "Helvetica Neue", Arial, sans-serif;
+            --base-bg: #050505; 
+            --content-bg: #0B0E14;
+            --accent-cyan: #00ced1; 
+            --accent-dim: rgba(0, 206, 209, 0.1);
+            --text-primary: #EDEDED; 
+            --text-secondary: #888888;
+            --font-display: "Courier New", Courier, monospace;
+            --font-body: "Helvetica Neue", Arial, sans-serif;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-display);
-            background-color: var(--base-bg);
-            color: var(--text-primary);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        /* HERO SECTION */
+        header {
+            min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; background: radial-gradient(circle at 50% 30%, #1a2525 0%, #050505 70%);
+            position: relative;
+        }
+        header::before {
+            content: ""; position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+            background-image: linear-gradient(var(--accent-dim) 1px, transparent 1px),
+            linear-gradient(90deg, var(--accent-dim) 1px, transparent 1px);
+            background-size: 50px 50px; opacity: 0.3; pointer-events: none;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
+        h1 { 
+            font-family: var(--font-display); font-size: 4.5rem; letter-spacing: -2px; line-height: 1.1; margin-bottom: 2rem; 
+            position: relative; z-index: 2;
         }
-
-        h1, h2, h3 {
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-        h1 { font-size: 3.5rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 1.5rem; color: var(--accent-cyan); }
-
-        p {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            max-width: 700px; /* Readable line length */
+      .cyan-text { color: var(--accent-cyan); text-shadow: 0 0 20px rgba(0, 206, 209, 0.4); }
+      .hero-sub { 
+            font-size: 1.4rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 3rem; position: relative; z-index: 2; 
         }
         
-        section { padding: 6rem 0; }
-        .text-center { text-align: center; }
-        .text-center p { margin-left: auto; margin-right: auto; }
-
-        /* Buttons (Consistent with Grid) */
-        .btn {
-            display: inline-block;
-            font-family: var(--font-display);
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-decoration: none;
-            padding: 1em 2.5em;
-            border-radius: 50px;
-            border: 2px solid transparent;
-            cursor: pointer;
+      .btn-group { display: flex; gap: 1.5rem; justify-content: center; position: relative; z-index: 2; }
+      .btn { 
+            padding: 1rem 2.5rem; border-radius: 2px; font-family: var(--font-display); font-weight: bold; font-size: 1rem; letter-spacing: 1px;
+            text-transform: uppercase; border: 1px solid var(--accent-cyan); color: var(--accent-cyan);
             transition: all 0.3s ease;
         }
-        .btn-primary {
-            background-color: var(--accent-cyan);
-            color: var(--base-bg);
-            border-color: var(--accent-cyan);
-        }
-        .btn-primary:hover {
-            background-color: var(--text-primary);
-            border-color: var(--text-primary);
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-primary);
-            border-color: var(--text-primary);
-        }
-        .btn-secondary:hover {
-            background-color: var(--text-primary);
-            color: var(--base-bg);
-        }
-        .cta-container { margin-top: 2.5rem; }
-        .cta-container .btn { margin: 0 0.5rem; }
+      .btn:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 30px var(--accent-cyan); }
 
-        /* ======================================================================
-        HERO SECTION (MASTHEAD) - UPDATED TO USE SVG OVERLAY
-        ======================================================================
-        */
-
-        #hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 0;
-            background-color: var(--base-bg); /* Solid background */
-            position: relative; /* For stacking */
-            overflow: hidden; /* To contain the pseudo-element */
+        /* MANIFESTO SECTION */
+        #manifesto { padding: 8rem 0; background: var(--base-bg); border-top: 1px solid #222; }
+      .quote-box {
+            border-left: 4px solid var(--accent-cyan); padding-left: 3rem; margin: 4rem 0;
         }
+      .quote-text { font-size: 2rem; font-family: var(--font-display); line-height: 1.4; color: #fff; }
+      .quote-author { display: block; margin-top: 1rem; color: var(--text-secondary); font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; }
 
-        /* This creates the 'subdued' SVG watermark */
-        #hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            
-            /* Assumes the SVG is in an /assets/ folder */
-            background-image: url('./assets/flockrush-murmuration.svg'); 
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 80% auto; /* Scale SVG to 80% of hero width */
-            
-            opacity: 0.1; /* VERY subdued. 10% opaque. */
-            z-index: 1; /* Sits behind the content */
+        /* THE JOURNEY (PHASES) */
+        #evolution { padding: 6rem 0; background: var(--content-bg); }
+      .timeline { 
+            display: flex; flex-direction: column; gap: 4rem; position: relative; margin-top: 4rem; 
+            border-left: 1px solid #333; padding-left: 3rem;
         }
-
-        #hero .hero-content {
-            position: relative; /* Ensure content is on top */
-            z-index: 2; /* On top of the SVG */
+      .phase-card { position: relative; }
+      .phase-card::before {
+            content: ""; position: absolute; left: -3.35rem; top: 0.5rem; width: 10px; height: 10px; 
+            background: #333; border-radius: 50%; border: 2px solid var(--base-bg);
         }
+      .phase-card.active::before { background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan); }
         
-        #hero p {
-            font-size: 1.3rem;
-            color: var(--text-primary);
-            max-width: 700px;
-            margin: 1.5rem auto 0 auto;
-        }
+      .phase-label { font-family: var(--font-display); color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; display: block; }
+      .phase-title { font-size: 2rem; margin-bottom: 1rem; color: #fff; }
+      .phase-desc { max-width: 600px; color: #aaa; font-size: 1.1rem; }
 
-        /* Our Story (The "Try" Section) */
-        #our-story { background-color: var(--content-bg); }
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            margin-top: 4rem;
+        /* PHILOSOPHY GRID */
+        #philosophy { padding: 8rem 0; text-align: center; }
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; text-align: left; margin-top: 4rem; }
+      .phil-card { 
+            background: #090909; border: 1px solid #222; padding: 3rem; transition: transform 0.3s; 
         }
-        .story-step {
-            background-color: var(--base-bg);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-cyan);
-        }
-        .story-step p {
-            font-size: 1rem;
-            color: var(--text-primary);
-            margin-bottom: 0;
-        }
-        .story-step .phase {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
+      .phil-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); }
+      .phil-icon { font-family: var(--font-display); font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 1.5rem; display: block; }
 
-        /* Philosophy */
-        #philosophy {
-            background-color: var(--base-bg);
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
+        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #444; font-family: var(--font-display); font-size: 0.9rem; }
         
-        /* Final CTA */
-        #final-cta {
-            background-color: var(--content-bg);
-            text-align: center;
-        }
-        
-        /* [CSS FIX] This rule centers the text in this section */
-        #final-cta p {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        #final-cta .btn {
-            transform: scale(1.1);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        footer p {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        footer a { color: var(--text-primary); text-decoration: none; }
-        footer a:hover { color: var(--accent-cyan); }
-        
-        @media (max-width: 767px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            section { padding: 4rem 0; }
-            
-            #hero::before {
-                background-size: 100% auto; /* Let the SVG fill the mobile width */
-            }
-            
-            .cta-container {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .cta-container .btn { margin: 0; }
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+          .grid-2 { grid-template-columns: 1fr; }
+          .timeline { padding-left: 2rem; }
+          .phase-card::before { left: -2.35rem; }
         }
     </style>
 </head>
-
 <body>
 
-    <header id="hero">
-        <div class="hero-content container">
+    <header>
+        <div class="container">
+            <span style="font-family:var(--font-display); color:var(--text-secondary); text-transform:uppercase; letter-spacing:2px; margin-bottom:1.5rem; display:block;">
+                Est. in AI 2018 // Toronto &bull; Luxembourg
+            </span>
             <h1>
-                Flockrush: Governing the Autonomous Enterprise.
+                Governing the<br>
+                <span class="cyan-text">Autonomous Enterprise.</span>
             </h1>
-            <p>
-                We had to build the "AI-assisted" future to realize the "Autonomous-First" one.
+            <p class="hero-sub">
+                We had to build the "AI-assisted" future to realize it was a trap.
+                Now, we build the Policy Mesh that sets the Autonomy free.
             </p>
-            <div class="cta-container">
-                <a href="./grid/index.html" class="btn btn-primary">Meet Flockrush Grid</a>
-                <a href="https://github.com/Flockrush" target="_blank" class="btn btn-secondary">See Our Research</a>
+            <div class="btn-group">
+                <a href="./grid/index.html" class="btn">Enter The Grid</a>
+                <a href="./grid/semantics.html" class="btn btn-secondary">Read the Research</a>
+                <a href="https://github.com/Flockrush" class="btn" style="border-color:#333; color:#aaa;">Research</a>
             </div>
         </div>
     </header>
 
-    <main>
-
-        <section id="our-story">
-            <div class="container text-center">
-                <h2>To Succeed, You Must Try.</h2>
-                <p>
-                    Success isn't a single action; it's the result of relentless iteration. Our journey was a series of 'tries' that led to a fundamental breakthrough.
+    <section id="manifesto">
+        <div class="container">
+            <div class="quote-box">
+                <p class="quote-text">
+                    "A faster car stuck in a traffic jam is still stuck. 
+                    The bottleneck isn't the AI. It is the <span class="cyan-text">Human-in-the-Loop</span>."
                 </p>
-
-                <div class="story-grid">
-                    <div class="story-step">
-                        <div class="phase">Phase 1: The Try (AI-Assisted)</div>
-                        <h3>We built "AI Twins."</h3>
-                        <p>
-                            We started by building powerful, "AI-assisted" services. Our AI Twins (like the Food Scientist and Herbalist) were successful, high-fidelity models that proved AI could be an expert. But they were still tools. They were 'human<strong>-in-</strong>the-loop.'
-                        </p>
-                    </div>
-
-                    <div class="story-step">
-                        <div class="phase">Phase 2: The Breakthrough (The Agent)</div>
-                        <h3>We built an autonomous scientist.</h3>
-                        <p>
-                            Our R&D led to a true breakthrough: an autonomous agent that could model, experiment, and discover new materials for energy storage, all on its own. It wasn't just a *model*; it was an *agent*.
-                        </p>
-                    </div>
-
-                    <div class="story-step">
-                        <div class="phase">Phase 3: The Realization (The OS)</div>
-                        <h3>We built the OS for the swarm.</h3>
-                        <p>
-                            This was our most critical 'try.' We realized the breakthrough wasn't the single agent. It was the *system* needed to govern it. A single agent is a tool. A swarm of agents is a workforce. That workforce needs an OS.
-                        </p>
-                    </div>
-                </div>
+                <span class="quote-author">// Flockrush Philosophy</span>
             </div>
-        </section>
-        
-        <section id="philosophy">
-            <div class="container text-center">
-                <h2>The Bottleneck Isn't Technology. It's the Workflow.</h2>
-                <p>
-                    We learned a hard lesson from our first "try": the most brilliant AI agent is only as effective as the human system it's plugged into.
-                </p>
-                <p>
-                    "AI-assisted" still means waiting for funding, approvals, and manual process. It's building a faster car only to get stuck in the same traffic jam. The "human<strong>-in-</strong>the-loop" <strong>*is*</strong> the roadblock.
-                </p>
+            <p style="max-width: 700px; font-size: 1.2rem; color: #ccc;">
+                The tech industry is selling you "Copilots" to help you work faster. 
+                But adding speed to a broken, approval-heavy workflow only creates more friction. 
+                We realized the only way to win is to remove the manual work entirely.
+            </p>
+        </div>
+    </section>
+
+    <section id="evolution">
+        <div class="container">
+            <h2 style="font-family:var(--font-display); font-size:2rem;">The Evolution</h2>
+            
+            <div class="timeline">
                 
-                <p style="font-size: 1.5rem; color: var(--text-primary); margin: 3rem auto;">
-                    We are not "anti-human."<br>
-                    We are simply, and relentlessly, <strong>pro-outcome.</strong>
-                </p>
+                <div class="phase-card">
+                    <span class="phase-label">Phase 1: The Try</span>
+                    <h3 class="phase-title">AI-Assisted (The Trap)</h3>
+                    <p class="phase-desc">
+                        We started like everyone else. We built "AI Twins." They were brilliant, but they were tools. They waited for a human to click "Approve." They were engines chained to a post.
+                    </p>
+                </div>
 
-                <p>
-                    Our philosophy is that the only solution is a new architecture. An <strong>Autonomous-First</strong> system, engineered for resilience, that can autonomously navigate and bypass the roadblocks.
-                </p>
-                <p>
-                    Flockrush is the <strong>"Human-on-the-Loop"</strong> governance layer. We provide the policy, not the process. We are the authority that makes the autonomous enterprise safe, stable, and—for the first time—unstoppable.
-                </p>
+                <div class="phase-card">
+                    <span class="phase-label">Phase 2: The Breakthrough</span>
+                    <h3 class="phase-title">The Autonomous Agent</h3>
+                    <p class="phase-desc">
+                        We pivoted. We built an agent that didn't ask for permission. It wasn't a model anymore; it was an entity. But a single agent is just a tool. 
+                    </p>
+                </div>
+
+                <div class="phase-card active">
+                    <span class="phase-label" style="color:var(--accent-cyan);">Phase 3: The Reality</span>
+                    <h3 class="phase-title"><span class="cyan-text">The Autonomous OS</span></h3>
+                    <p class="phase-desc">
+                        We realized that a swarm of agents is not a workforce; it is a <strong>sovereign capability</strong>. That capability needs a <strong>Governance Mesh</strong>. So we built Flockrush Grid.
+                    </p>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="final-cta">
-            <div class="container">
-                <h2>Enter the Future.</h2>
-                <p>
-                    Our research is complete. The OS is live. Meet the product of our journey.
-                </p>
-                <div class="cta-container">
-                    <a href="./grid/index.html" class="btn btn-primary">Meet Flockrush Grid</a>
+    <section id="philosophy">
+        <div class="container">
+            <h2 style="font-size:3rem; line-height:1.1; max-width:800px; margin:0 auto;">
+                We are not anti-human.<br>
+                We are relentlessly <span class="cyan-text">Pro-Outcome.</span>
+            </h2>
+
+            <div class="grid-2">
+                <div class="phil-card">
+                    <span class="phil-icon">&lt;Human-in-the-Loop /&gt;</span>
+                    <h3>The Bottleneck</h3>
+                    <p style="color:#888;">
+                        The human is a process worker. A fallible operator who slows the machine down to the speed of a mouse click.
+                    </p>
+                </div>
+                <div class="phil-card" style="border-color:var(--accent-cyan);">
+                    <span class="phil-icon">&lt;Human-ON-the-Loop /&gt;</span>
+                    <h3>The Governor</h3>
+                    <p style="color:#888;">
+                        The human is a Legislator. You set the "Policy Mesh," and the swarm executes the mission within your laws.
+                    </p>
                 </div>
             </div>
-        </section>
 
-    </main>
+            <div style="margin-top:5rem;">
+                <a href="./grid/index.html" class="btn" style="background:var(--accent-cyan); color:#050505;">Meet the Product</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
             <p>
-                Flockrush: Governing the Autonomous Enterprise. <br>
-                Based in Toronto, Ontario and Luxembourg.
-            </p>
-            <p>
-                © 2025 Flockrush. All Rights Reserved. <br>
-                <a href="https://github.com/Flockrush" target="_blank">@Flockrush (R&D)</a> | <a href="https://github.com/FlockrushGrid" target="_blank">@FlockrushGrid (Product)</a>
+                OS for Autonomy®<br>
+                Flockrush: Governing the Autonomous Enterprise.<br>
+                &copy; 2025 Flockrush. Based in Toronto & Luxembourg.
             </p>
         </div>
     </footer>
-
 </body>
 </html>

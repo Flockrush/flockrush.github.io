@@ -10,51 +10,10 @@
     <meta name="description" content="Flockrush Grid is the first true autonomous-first business OS. Built AI-native with human-on-the-loop governance, it is not an AI-assistant or copilot. It is a self-aware, self-evolving system. Enter the future." />
     <link rel="canonical" href="https://www.flockrush.com/grid" /> 
     
-    <meta property="og:title" content="Flockrush Grid: ABOS - Autonomous Business OS" />
-    <meta property="og:description" content="Not 'AI-assisted.' Autonomous-first with human-on-the-loop governance." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.flockrush.com/grid" />
-    <meta property="og:image" content="../assets/grid/flockrushgrid-og.webp" /> 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Flockrush Grid: ABOS - Autonomous Business OS" />
-    <meta name="twitter:description" content="Autonomous. Aware. Aligned. From signal to outcome." />
-    <meta name="twitter:image" content="../assets/grid/flockrushgrid-og.webp" />
-    <link rel="icon" type="image/png" href="../assets/grid/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />
-    <link rel="shortcut icon" href="../assets/grid/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/grid/apple-touch-icon.png" />
-    <link rel="manifest" href="../assets/grid/site.webmanifest" />
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Flockrush Grid: ABOS",
-      "alternateName": "Autonomous Business OS",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Cloud-based SaaS",
-      "keywords": "autonomous-first, AI-native business OS, human-on-the-loop, autonomous agents, self-evolving OS, not a copilot",
-      "description": "Flockrush Grid is the first true autonomous-first, AI-native Business OS. It is not an 'AI-assistant' or 'copilot.' It is a self-aware, self-evolving, self-healing, and self-protective system built for enterprise, using human-on-the-loop governance. It coordinates AI agents like a murmuration to move business from signal to outcome at swarm speed.",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.flockrush.com/grid"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Flockrush",
-        "url": "https://www.flockrush.com",
-        "sameAs": [
-          "https://twitter.com/FlockrushGrid",
-          "https://github.com/FlockrushGrid" 
-        ]
-      }
-    }
-    </script>
-
     <style>
         :root {
             --base-bg: #050505; --content-bg: #0A0F14;
-            --accent-cyan: #00FFC2; --accent-purple: #BD00FF;
+            --accent-cyan: #00FFC2; --accent-purple: #BD00FF; --accent-gold: #FFD700;
             --text-primary: #EDEDED; --text-secondary: #888888;
             --font-display: "Courier New", Courier, monospace;
             --font-body: "Helvetica Neue", Arial, sans-serif;
@@ -62,62 +21,75 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-       .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
         /* HERO FIXES */
         #hero {
-            /* Changed from height: 100vh to min-height with dvh for mobile browsers */
             min-height: 100dvh; 
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; background: radial-gradient(circle at center, #111 0%, #000 100%);
-            /* Added padding so text doesn't touch the very top on short screens */
             padding: 4rem 1.5rem; 
         }
         h1 { font-family: var(--font-display); font-size: 4rem; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; }
-       .glitch { color: var(--accent-cyan); }
-       .hero-tag { color: var(--accent-purple); font-family: var(--font-display); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; font-size: 0.9rem; }
+      .glitch { color: var(--accent-cyan); }
+      .hero-tag { color: var(--accent-purple); font-family: var(--font-display); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; font-size: 0.9rem; }
 
         /* JOURNEY GRID */
         #journey { padding: 6rem 0; background: var(--content-bg); border-top: 1px solid #222; }
-       .section-title { font-family: var(--font-display); font-size: 2rem; margin-bottom: 3rem; text-align: center; }
-       .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+      .section-title { font-family: var(--font-display); font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+      .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         
-       .journey-card {
+      .journey-card {
             background: #000; border: 1px solid #333; padding: 2rem; position: relative; overflow: hidden;
             display: flex; flex-direction: column; justify-content: space-between; height: 100%; transition: all 0.3s ease;
         }
-       .journey-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 194, 0.1); }
-       .card-num { font-family: var(--font-display); color: #333; font-size: 4rem; position: absolute; top: -10px; right: 10px; opacity: 0.5; }
-       .card-title { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
-       .card-desc { color: #888; font-size: 0.95rem; margin-bottom: 2rem; }
-       .card-link { color: var(--accent-cyan); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+      .journey-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 194, 0.1); }
+      .card-num { font-family: var(--font-display); color: #333; font-size: 4rem; position: absolute; top: -10px; right: 10px; opacity: 0.5; }
+      .card-title { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem; }
+      .card-desc { color: #888; font-size: 0.95rem; margin-bottom: 2rem; }
+      .card-link { color: var(--accent-cyan); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+       
+       /* RECRUITMENT CALLOUT */
+       #council-callout {
+           padding: 4rem 0; background: #080808; border-top: 1px solid #333;
+           background-image: linear-gradient(45deg, #0d0d0d 25%, transparent 25%, transparent 75%, #0d0d0d 75%, #0d0d0d), linear-gradient(45deg, #0d0d0d 25%, transparent 25%, transparent 75%, #0d0d0d 75%, #0d0d0d);
+           background-size: 20px 20px; background-position: 0 0, 10px 10px;
+       }
+      .council-box {
+           border: 1px solid var(--accent-gold); padding: 3rem; position: relative;
+           background: rgba(0,0,0,0.9); text-align: center;
+       }
+      .council-tag { color: var(--accent-gold); font-family: var(--font-display); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; display:block;}
+      .btn-gold { padding: 1rem 2rem; background: var(--accent-gold); color: #000; font-weight: bold; text-transform: uppercase; text-decoration: none; display: inline-block; margin-top: 1.5rem; transition: 0.3s; font-family: var(--font-display);}
+      .btn-gold:hover { background: #fff; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+
         /* CTA Form */
         #cta-section {
             background: #000; padding: 6rem 0; border-top: 1px solid #333; border-bottom: 1px solid #333; text-align: center;
         }
-       .cta-form {
+      .cta-form {
             display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;
             max-width: 600px; margin-left: auto; margin-right: auto;
         }
-       .cta-input {
+      .cta-input {
             flex: 1; padding: 1rem; background: #111; border: 1px solid #333; color: #fff;
             font-family: var(--font-display); font-size: 1rem;
         }
-       .cta-input:focus { outline: none; border-color: var(--accent-cyan); }
-       .cta-btn {
+      .cta-input:focus { outline: none; border-color: var(--accent-cyan); }
+      .cta-btn {
             padding: 1rem 2rem; background: var(--accent-cyan); color: #000; border: none;
             font-family: var(--font-display); font-weight: bold; text-transform: uppercase; cursor: pointer;
             transition: 0.3s;
         }
-       .cta-btn:hover { color: var(--accent-purple); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 194, 0.1); }
+      .cta-btn:hover { color: var(--accent-purple); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 194, 0.1); }
         footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #555; }
         /* MOBILE RESPONSIVENESS */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; } /* Shrink huge text */
-            .card-grid { grid-template-columns: 1fr; } /* Force single column stack */
-            .journey-card { min-height: auto; }
-            .cta-form { flex-direction: column; }
-            .cta-btn { width: 100%; }
+            h1 { font-size: 2.5rem; } 
+           .card-grid { grid-template-columns: 1fr; }
+           .journey-card { min-height: auto; }
+           .cta-form { flex-direction: column; }
+           .cta-btn { width: 100%; }
         }
 
     </style>
@@ -186,6 +158,23 @@
             </div>
         </div>
     </section>
+
+    <section id="council-callout">
+        <div class="container">
+            <div class="council-box">
+                <span class="council-tag">Human-on-the-Loop Recruitment</span>
+                <h2 style="font-family:var(--font-display); font-size:2rem; margin-bottom:1rem; color:#fff;">
+                    Code is Cheap. Governance is the Currency.
+                </h2>
+                <p style="color:#ccc; max-width:700px; margin:0 auto;">
+                    We are building the <strong>Governance Council</strong>. We are recruiting retired C-Suite executives and deep domain experts (SMEs) to write the "Policy Mesh" that governs our AI agents. <br><br>
+                    You provide the legislation. The Grid provides the autonomy.
+                </p>
+                <a href="../council.html" class="btn-gold">Apply to the Council</a>
+            </div>
+        </div>
+    </section>
+
     <section id="cta-section">
             <div class="container">
                 <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">
@@ -205,7 +194,8 @@
     <footer>
         <div class="container">
             OS for Autonomy®<br>
-            <p>Flockrush Grid &copy; 2025. Stop Assisting. Start Governing.</p>
+            Stop Assisting. Start Governing.<br>
+            <p>Flockrush Grid &copy; 2025. </p>
         </div>
     </footer>
 

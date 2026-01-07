@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Governance Council | Flockrush</title>
+    <link rel="icon" type="image/svg+xml" href="assets/grid/favicon.svg" />
+    
+    <style>
+        :root {
+            --base-bg: #050505; --content-bg: #0A0F14;
+            --accent-cyan: #00FFC2; --accent-gold: #FFD700;
+            --text-primary: #EDEDED; --text-dim: #888;
+            --code-bg: #111;
+            --font-mono: "Courier New", monospace; --font-sans: "Helvetica Neue", sans-serif;
+        }
+        body { background: var(--base-bg); color: var(--text-primary); font-family: var(--font-sans); margin: 0; line-height: 1.6; }
+       .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* Navigation & Footer */
+        nav { padding: 2rem 0; border-bottom: 1px solid #222; }
+       .back-link { color: #666; text-decoration: none; font-family: var(--font-mono); font-size: 0.9rem; transition: 0.3s; }
+       .back-link:hover { color: var(--accent-cyan); }
+        footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #555; font-family: var(--font-sans); font-size: 0.9rem; margin-top: 4rem; }
+
+        /* Typography */
+        h1 { font-family: var(--font-mono); font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; }
+        h2 { font-family: var(--font-mono); font-size: 2rem; color: var(--accent-cyan); margin-bottom: 2rem; }
+       .tag { color: var(--accent-gold); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; border: 1px solid var(--accent-gold); padding: 0.5rem 1rem; display: inline-block; margin-bottom: 2rem;}
+        
+        /* Hero */
+        header { padding: 8rem 0; border-bottom: 1px solid #222; text-align: center; }
+       .hero-sub { font-size: 1.3rem; color: var(--text-dim); max-width: 800px; margin: 2rem auto; }
+
+        /* The Deal Grid */
+       .deal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 4rem 0; }
+       .deal-card { background: #111; padding: 2rem; border-top: 3px solid var(--accent-cyan); transition: transform 0.3s; }
+       .deal-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+       .deal-val { font-size: 2rem; font-weight: bold; color: #fff; display: block; margin-bottom: 0.5rem; }
+       .deal-label { color: var(--text-dim); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+        /* The DSL Comparison Section */
+        #dsl-section { background: var(--content-bg); padding: 6rem 0; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+        .split-view { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .code-window {
+            background: var(--code-bg); border: 1px solid #333; border-radius: 4px; padding: 1.5rem;
+            font-family: var(--font-mono); font-size: 0.85rem; position: relative;
+        }
+        .window-label {
+            position: absolute; top: -12px; left: 20px; background: var(--content-bg);
+            padding: 0 10px; color: #555; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .code-highlight { color: var(--accent-cyan); }
+        .keyword { color: var(--accent-gold); }
+        .string { color: #A5FF90; }
+        .comment { color: #666; font-style: italic; }
+
+        /* The Sprint Model */
+       .sprint-box { background: #080808; border: 1px solid #333; padding: 3rem; margin: 4rem 0; border-radius: 4px; }
+       .sprint-step { margin-bottom: 2rem; padding-left: 2rem; border-left: 2px solid var(--accent-cyan); }
+       .sprint-title { color: var(--accent-cyan); font-weight: bold; font-family: var(--font-mono); font-size: 1.2rem; }
+
+        /* Domains */
+       .domain-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+       .domain-item { background: #111; padding: 1rem; border: 1px solid #333; font-size: 0.9rem; color: #aaa; }
+       .domain-item.active { border-color: var(--accent-gold); color: #fff; }
+
+        /* CTA */
+       .btn { padding: 1.2rem 3rem; background: var(--accent-gold); color: #000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border-radius: 2px; transition: 0.3s; font-size: 1.1rem; cursor: pointer; border:none; }
+       .btn:hover { background: #fff; box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); }
+
+        /* Modal */
+       .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(5px); }
+       .modal-content { background: #0A0F14; border: 1px solid var(--accent-gold); margin: 5% auto; padding: 3rem; max-width: 650px; position: relative; max-height: 90vh; overflow-y: auto; }
+       .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+       .form-group { margin-bottom: 1.5rem; }
+       .form-label { display: block; margin-bottom: 0.5rem; color: #ccc; font-size: 0.9rem; }
+       .form-input,.form-select { width: 100%; padding: 1rem; background: #000; border: 1px solid #333; color: #fff; font-family: var(--font-sans); }
+       .form-input:focus { border-color: var(--accent-cyan); outline: none; }
+       
+       @media (max-width: 768px) {
+           h1 { font-size: 2.5rem; }
+           .split-view { grid-template-columns: 1fr; gap: 2rem; }
+           .domain-grid { grid-template-columns: repeat(2, 1fr); }
+       }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+    <div class="container" style="padding-top:0; padding-bottom:0;">
+        <a href="index.html" class="back-link">&lt; STATUS: RETURN TO HQ</a>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <span class="tag">The Flockrush Governance Council</span>
+        <h1>Don’t Just Predict the Future.<br><span style="color:var(--accent-cyan)">Legislate It.</span></h1>
+        <p class="hero-sub">
+            The Agentic Economy will be worth <strong>$5 Trillion by 2030</strong>. <br>
+            Autonomy without governance is chaos. We are recruiting the <strong>Legislators</strong> who will write the Constitution for the Autonomous Enterprise.
+        </p>
+        <div style="margin-top: 3rem;">
+            <button class="btn" onclick="openModal()">See if you Qualify</button>
+        </div>
+        <p style="color:#555; font-size:0.9rem; margin-top:1rem;">*Limited to 1 Fellow per F500 Domain.</p>
+    </div>
+</header>
+
+<section class="container">
+    <div class="deal-grid">
+        <div class="deal-card">
+            <span class="deal-val">Equity</span>
+            <span class="deal-label">Founding Fellow Status</span>
+            <p style="color:#888; margin-top:1rem;">Advisory shares in the OS for Autonomy. You don't just advise; you own the platform.</p>
+        </div>
+        <div class="deal-card">
+            <span class="deal-val">Royalty</span>
+            <span class="deal-label">IP Revenue Share</span>
+            <p style="color:#888; margin-top:1rem;">Earn recurring revenue on the specific <strong>Policy Mesh</strong> you architect. Your wisdom becomes a licensed asset.</p>
+        </div>
+        <div class="deal-card">
+            <span class="deal-val">Legacy</span>
+            <span class="deal-label">Codified Wisdom</span>
+            <p style="color:#888; margin-top:1rem;">Your logic will govern 50 million agents executing billions of transactions. Immortalize your playbook.</p>
+        </div>
+    </div>
+</section>
+
+<!-- DSL SECTION -->
+<section id="dsl-section">
+    <div class="container">
+        <div class="split-view">
+            <div>
+                <h2 style="font-size: 2.5rem; line-height: 1.2;">We Don't Need Coders.<br>We Need <span style="color:var(--accent-gold);">Legislators.</span></h2>
+                <p style="color: #aaa; font-size: 1.1rem; margin-bottom: 2rem;">
+                    The "Translation Gap" is where governance dies. When you explain a rule to a developer, nuance is lost in Python libraries.
+                    <br><br>
+                    <strong>We removed the developer.</strong>
+                    <br><br>
+                    Using our Policy Mesh DSL, you write the rules directly. It reads like a contract, but executes like a machine.
+                </p>
+            </div>
+            
+            <div class="code-window">
+                <span class="window-label" style="color:var(--accent-cyan); border:1px solid var(--accent-cyan);">The Instrument (Policy Mesh)</span>
+<pre>
+<span class="keyword">policy</span> <span class="string">"Visual Truth"</span> <span class="keyword">do</span>
+
+  <span class="keyword">rule</span> <span class="string">"Deepfake Defense"</span> <span class="keyword">do</span>
+    <span class="keyword">description</span> <span class="string">"Ensure damage photos are real."</span>
+    <span class="keyword">trigger</span> :fnol_image_upload
+
+    <span class="keyword">gate</span> :forensic_integrity <span class="keyword">do</span>
+      <span class="comment"># Check for GAN fingerprints</span>
+      <span class="keyword">check</span> :synthetic_noise, max_level: 0.05
+    <span class="keyword">end</span>
+
+    <span class="keyword">action</span> :analyze_damage
+    <span class="keyword">action</span> :flag_siu
+  <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+</pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="padding: 6rem 0;">
+    <div class="container">
+        <h2 style="text-align:center;">This is Not a "Meeting." It is a Sprint.</h2>
+        <p style="text-align:center; max-width:700px; margin:0 auto 3rem auto; color:#888;">
+            We do not need 4 hours of "advice" a month. We need your brain dumped into code.
+            The Council operates on a <strong>Sprint & Sustain</strong> model.
+        </p>
+
+        <div class="sprint-box">
+            <div class="sprint-step">
+                <div class="sprint-title">Phase 1: The Constitution Sprint (Month 1)</div>
+                <p style="color:#ccc;">
+                    A rigorous, deep-dive extraction of your expertise. You work with our AI Architects to map the "Immutable Laws" of your industry (e.g., Solvency Rules, GNDA Compliance, Supply Chain Ethics). We turn your wisdom into our <strong>Policy DSL</strong>.
+                </p>
+            </div>
+            <div class="sprint-step">
+                <div class="sprint-title">Phase 2: The Validation (Month 2)</div>
+                <p style="color:#ccc;">
+                    We deploy your Policy Mesh into the <strong>Evolutionary Validation Fabric (EVF)</strong>. We attack it. We stress test it. You review the failures and refine the logic.
+                </p>
+            </div>
+            <div class="sprint-step" style="border:none;">
+                <div class="sprint-title">Phase 3: The Governance (Ongoing)</div>
+                <p style="color:#ccc;">
+                    Once the Mesh is live, you shift to oversight. Quarterly Council meetings to review agent drift, update policies for new regulations, and govern the swarm.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="margin-bottom: 6rem;">
+    <h2 style="text-align:center;">Target Domains</h2>
+    <p style="text-align:center; margin-bottom: 2rem; color:#888;">We are seating Fellows for the following Policy Meshes:</p>
+    <div class="domain-grid">
+        <div class="domain-item active">Financial Services</div>
+        <div class="domain-item active">Insurance (Life/P&C)</div>
+        <div class="domain-item active">Supply Chain</div>
+        <div class="domain-item active">Healthcare</div>
+        <div class="domain-item">Energy & Utilities</div>
+        <div class="domain-item">Telecommunications</div>
+        <div class="domain-item">Retail & CPG</div>
+        <div class="domain-item">Manufacturing</div>
+    </div>
+</section>
+
+<div id="applyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 style="margin-top:0; color:var(--accent-gold);">Fellowship Application</h2>
+        <p style="color:#888; font-size:0.9rem; margin-bottom:2rem;">
+            This is a high-impact, equity-based role. We are looking for the top 1% of domain experts who have managed significant P&L or Risk.
+        </p>
+        
+        <form action="https://formspree.io/f/myzlyjgk" method="POST">
+            
+            <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Corporate/Personal Email</label>
+                <input type="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">LinkedIn Profile URL</label>
+                <input type="text" name="linkedin" class="form-input" placeholder="linkedin.com/in/..." required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Primary Domain Expertise</label>
+                <select name="domain" class="form-select">
+                    <option value="" disabled selected>Select your domain...</option>
+                    <option value="finance">Financial Services (Treasury/Settlement)</option>
+                    <option value="insurance_life">Insurance (Life & Health)</option>
+                    <option value="insurance_pc">Insurance (P&C / Commercial)</option>
+                    <option value="supply_chain">Supply Chain & Logistics</option>
+                    <option value="healthcare">Healthcare & Pharma</option>
+                    <option value="energy">Energy & Manufacturing</option>
+                    <option value="retail">Retail & E-Commerce</option>
+                    <option value="telecom">Telecommunications</option>
+                    <option value="legal">Legal/Compliance/Privacy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Highest P&L / Asset Responsibility Managed</label>
+                <select name="pnl" class="form-select" required>
+                    <option value="" disabled selected>Select range...</option>
+                    <option value="under_50m">< $50M</option>
+                    <option value="50m_500m">$50M - $500M</option>
+                    <option value="500m_5b">$500M - $5 Billion</option>
+                    <option value="5b_plus">$5 Billion+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Are you willing to commit to an intensive "Constitution Sprint" (approx. 20-30 hours over 1 month) to architect the initial Policy Mesh?</label>
+                <select name="commitment" class="form-select" required>
+                    <option value="yes">Yes, I want to build the standard.</option>
+                    <option value="no">No, I am looking for a passive board role.</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">One "Immutable Law" you would program into an AI running your industry?</label>
+                <textarea name="one_rule" class="form-input" rows="3" placeholder="e.g., Never bind a policy if Solvency Ratio < 150%..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width:100%;">Submit for Review</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>
+            OS for Autonomy®<br>
+            Flockrush: Governing the Autonomous Enterprise.<br>
+            &copy; 2025 Flockrush. Based in Toronto & Luxembourg.
+        </p>
+    </div>
+</footer>
+
+<script>
+    function openModal() { document.getElementById("applyModal").style.display = "block"; }
+    function closeModal() { document.getElementById("applyModal").style.display = "none"; }
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("applyModal")) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>

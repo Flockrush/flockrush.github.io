@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+    <meta name="keywords" content="Architecture of Autonomy, ai market map, ai research, OS for Autonomy, security, FedRAMP, NIST SP 800-53, GDPR Article 32, EU AI Act, autonomous-first, autonomous business OS, AI-native, human-on-the-loop, Flockrush, Enterprise AI, AI Vendors 2026" />
+    <title>Flockrush: Governing the Autonomous Enterprise | Market Map</title>
+    <meta property="og:title" content="Flockrush: Governing the Autonomous Enterprise | Market Map" />
+    <meta property="og:description" content="The Architecture of Autonomy: A Comprehensive Product-Market Map of the Enterprise AI Landscape (2025-2026)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flockrush.com/" />
+    <meta property="og:image" content="../assets/flockrush/flockrush-og.webp" /> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flockrush: The Architecture of Autonomy" />
+    <meta name="twitter:description" content="The Architecture of Autonomy | Comprehensive Product-Market Map" />
+    <meta name="twitter:image" content="../assets/flockrush/flockrush-market-map-og.webp" />
+    <link rel="icon" type="image/png" href="../assets/flockrush/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/flockrush/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/flockrush/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/flockrush/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/flockrush/site.webmanifest" />
+    <link rel="canonical" href="https://www.flockrush.com/ai-market" /> 
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.0"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Flockrush: The Architecture of Autonomy",
+      "alternateName": "Flockrush: Governing the Autonomous Enterprise.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud-based SaaS",
+      "keywords": "OS for Autonomy, autonomous-first, AI-native business OS, human-on-the-loop, autonomous agents, self-evolving OS, not a copilot",
+      "description": "The Architecture of Autonomy: A Comprehensive Product-Market Map of the Enterprise AI Landscape (2025-2026).",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.flockrush.com/ai-market"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Flockrush",
+        "url": "https://www.flockrush.com",
+        "sameAs": [
+          "https://twitter.com/FlockrushGrid",
+          "https://github.com/FlockrushGrid",
+          "https://github.com/Flockrush" 
+        ]
+      }
+    }
+    </script>
+    <style>
+        :root {
+            /* Palette: Dark Mode Cyberpunk */
+            --base-bg: #050505; 
+            --content-bg: #0A0F14;
+            --panel-bg: #0d0d0d;
+            
+            --accent-cyan: #00FFC2; 
+            --accent-purple: #BD00FF; 
+            --accent-gold: #FFD700;
+            --accent-danger: #FF4444;
+            
+            --text-primary: #EDEDED; 
+            --text-secondary: #888888;
+            --text-muted: #555555;
+
+            --font-display: "Courier New", Courier, monospace;
+            --font-body: "Helvetica Neue", Arial, sans-serif;
+            
+            --border-color: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: var(--font-body); 
+            background-color: var(--base-bg); 
+            color: var(--text-primary); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--base-bg); }
+        ::-webkit-scrollbar-thumb { background: #333; border: 1px solid var(--base-bg); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
+
+        /* HEADER */
+        header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+            flex-shrink: 0;
+            z-index: 20;
+        }
+
+        .hero-tag { color: var(--accent-purple); font-family: var(--font-display); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 0.5rem; }
+        h1 { font-family: var(--font-display); font-size: 2rem; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; color: #fff; }
+        .glitch { color: var(--accent-cyan); text-shadow: 2px 2px 0px rgba(189, 0, 255, 0.4); }
+
+        /* NAVIGATION */
+        .nav-container { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-btn {
+            background: transparent; 
+            border: 1px solid var(--border-color); 
+            color: var(--text-secondary);
+            padding: 0.5rem 1.5rem; 
+            cursor: pointer; 
+            font-family: var(--font-display); 
+            text-transform: uppercase;
+            font-size: 0.8rem; 
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover { color: var(--accent-cyan); border-color: var(--accent-cyan); box-shadow: 0 0 10px rgba(0, 255, 194, 0.2); }
+        .nav-btn.active { background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan); font-weight: bold; }
+
+        /* MAIN LAYOUT */
+        .main-container { 
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .view-section { display: none; animation: fadeIn 0.5s ease; }
+        .view-section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* KPI CARDS */
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .journey-card {
+            background: #000; border: 1px solid var(--border-color); padding: 2rem; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;
+            min-height: 180px;
+        }
+        .journey-card:hover { border-color: var(--accent-cyan); transform: translateY(-3px); box-shadow: 0 5px 20px rgba(0, 255, 194, 0.1); }
+        .card-num { font-family: var(--font-display); color: #222; font-size: 4rem; position: absolute; top: -15px; right: 5px; z-index: 0; pointer-events: none; }
+        .card-content { z-index: 1; position: relative; }
+        .card-title { font-family: var(--font-display); font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        .card-value { font-size: 1.8rem; font-weight: bold; color: var(--text-primary); margin-bottom: 0.5rem; }
+        .card-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; }
+
+        /* CHARTS AREA */
+        .charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 3rem; min-height: 400px; }
+        .chart-box {
+            background: #000; border: 1px solid var(--border-color); padding: 1.5rem; position: relative; display: flex; flex-direction: column;
+        }
+        .chart-header { display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: flex-end; }
+        .chart-title { font-family: var(--font-display); color: var(--text-primary); font-size: 1.1rem; }
+        @media(max-width: 1024px) { .charts-row { grid-template-columns: 1fr; } }
+
+        /* DATA GRID TABLE */
+        .toolbar { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .search-input {
+            background: #000; border: 1px solid var(--border-color); color: #fff; padding: 1rem;
+            font-family: var(--font-display); flex: 1; min-width: 300px; font-size: 0.9rem;
+        }
+        .search-input:focus { outline: none; border-color: var(--accent-cyan); }
+        .filter-select {
+            background: #000; border: 1px solid var(--border-color); color: #fff; padding: 1rem;
+            font-family: var(--font-display); cursor: pointer; min-width: 200px;
+        }
+
+        .table-wrapper {
+            background: #000; border: 1px solid var(--border-color); overflow-x: auto;
+            max-height: 70vh; /* Scrollable table */
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th {
+            background: var(--content-bg); color: var(--accent-cyan); font-family: var(--font-display); text-transform: uppercase;
+            padding: 1.2rem; text-align: left; border-bottom: 1px solid var(--border-color); cursor: pointer;
+            position: sticky; top: 0; z-index: 10;
+        }
+        th:hover { color: #fff; background: #111; }
+        td { padding: 1.2rem; border-bottom: 1px solid #1a1a1a; color: var(--text-secondary); vertical-align: top;}
+        tr:hover td { background: rgba(0, 255, 194, 0.03); color: var(--text-primary); }
+        
+        .badge {
+            padding: 0.3rem 0.6rem; font-size: 0.65rem; text-transform: uppercase; border: 1px solid #333; 
+            font-family: var(--font-display); letter-spacing: 1px; display: inline-block; white-space: nowrap;
+        }
+        .badge-infra { color: var(--accent-purple); border-color: var(--accent-purple); }
+        .badge-auto { color: var(--accent-cyan); border-color: var(--accent-cyan); background: rgba(0, 255, 194, 0.1); }
+        .badge-app { color: var(--accent-gold); border-color: var(--accent-gold); }
+        .badge-gov { color: #FF9F1C; border-color: #FF9F1C; } /* Governance */
+        .badge-serv { color: var(--text-secondary); border-color: var(--text-secondary); } /* Services */
+
+        .score-high { color: var(--accent-cyan); font-weight: bold; }
+        .score-mid { color: var(--text-primary); }
+        .score-low { color: var(--text-muted); }
+
+        /* PROFILES GRID */
+        .profiles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+        .vendor-card {
+            background: #000; border: 1px solid var(--border-color); padding: 1.5rem;
+            display: flex; flex-direction: column; gap: 1rem;
+        }
+        .vendor-header { display: flex; justify-content: space-between; align-items: start; }
+        .vendor-name { color: var(--accent-cyan); font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.2rem; }
+        .vendor-cat { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+        .vendor-critique { 
+            font-size: 0.85rem; color: #ccc; border-left: 2px solid var(--accent-purple); padding-left: 1rem; font-style: italic; margin: 0.5rem 0;
+            background: rgba(189, 0, 255, 0.05); padding: 0.8rem;
+        }
+        .feature-mini-list { font-size: 0.75rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .feature-tag { background: #111; padding: 0.2rem 0.5rem; border: 1px solid #222; }
+
+        /* SLIDE OVER MODAL */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px);
+            z-index: 100; display: none; opacity: 0; transition: opacity 0.3s;
+        }
+        .modal-panel {
+            position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 600px;
+            background: #080808; border-left: 1px solid var(--accent-cyan); z-index: 101;
+            padding: 3rem; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex; flex-direction: column; overflow-y: auto;
+            background-image: linear-gradient(45deg, #0d0d0d 25%, transparent 25%, transparent 75%, #0d0d0d 75%, #0d0d0d), linear-gradient(45deg, #0d0d0d 25%, transparent 25%, transparent 75%, #0d0d0d 75%, #0d0d0d);
+            background-size: 20px 20px; background-position: 0 0, 10px 10px;
+            box-shadow: -10px 0 50px rgba(0,0,0,0.8);
+        }
+        .modal-open .modal-overlay { display: block; opacity: 1; }
+        .modal-open .modal-panel { transform: translateX(0); }
+        
+        .modal-title { font-family: var(--font-display); font-size: 2rem; color: var(--accent-cyan); margin-bottom: 0.5rem; line-height: 1; }
+        .modal-subtitle { color: var(--accent-purple); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 2rem; display: block; letter-spacing: 2px; }
+        
+        .close-btn { 
+            position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; 
+            color: #555; font-size: 2rem; cursor: pointer; line-height: 1; transition: 0.2s;
+        }
+        .close-btn:hover { color: var(--accent-danger); transform: rotate(90deg); }
+
+        .feature-row {
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 1rem; background: #0e0e0e; border: 1px solid #222; margin-bottom: 0.5rem;
+            transition: 0.2s;
+        }
+        .feature-row:hover { border-color: #444; background: #151515; }
+        .feature-name { color: #fff; font-family: var(--font-display); font-size: 0.9rem; }
+        .feature-desc { color: #888; font-size: 0.8rem; margin-top: 0.3rem; }
+        .stat-block { text-align: right; }
+        .stat-val { font-family: var(--font-display); font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="hero-tag">Operational Intelligence // 2025-2026</span>
+        <h1 class="glitch">MARKET MAP: THE RECKONING</h1>
+        <div class="nav-container">
+            <button onclick="switchView('dashboard')" id="btn-dashboard" class="nav-btn active">Strategic Map</button>
+            <button onclick="switchView('grid')" id="btn-grid" class="nav-btn">Data Grid</button>
+            <button onclick="switchView('profiles')" id="btn-profiles" class="nav-btn">Vendor Intel</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <!-- DASHBOARD VIEW -->
+        <div id="view-dashboard" class="view-section active">
+            <!-- Executive Summary Snippet -->
+            <div style="margin-bottom: 2rem; border-left: 2px solid var(--accent-cyan); padding-left: 1.5rem;">
+                <h3 style="color: var(--text-primary); font-family: var(--font-display); text-transform: uppercase; margin-bottom: 0.5rem;">The Great Decoupling</h3>
+                <p style="color: var(--text-secondary); max-width: 800px;">
+                    While 88% of organizations report AI usage, fewer than 6% are capturing EBIT impact. The market is splitting between 
+                    <span style="color: var(--accent-purple)">Legacy Incumbents</span> building "Model Governance" dashboards and 
+                    <span style="color: var(--accent-cyan)">Autonomous Disruptors</span> building "Mission Governance" systems.
+                </p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="journey-card">
+                    <span class="card-num">01</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Market Phase</h3>
+                        <div class="card-value" style="color: var(--accent-cyan)">Accountable Acceleration</div>
+                        <p class="card-desc">Transitioning from exuberant exploration (2023-24) to value-driven rigor.</p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span class="card-num">02</span>
+                    <div class="card-content">
+                        <h3 class="card-title">High Performers</h3>
+                        <div class="card-value" style="color: var(--accent-purple)">6%</div>
+                        <p class="card-desc">Only a fraction of enterprises are scaling GenAI to capture significant EBIT impact.</p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span class="card-num">03</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Dominant Shift</h3>
+                        <div class="card-value" style="color: var(--accent-gold)">Model to Mission</div>
+                        <p class="card-desc">Replacing passive governance dashboards with active, self-healing autonomy.</p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span class="card-num">04</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Primary Risk</h3>
+                        <div class="card-value" style="color: var(--accent-danger)">Human-in-Loop</div>
+                        <p class="card-desc">Manual approval steps creating latency bottlenecks in high-speed operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-row">
+                <div class="chart-box">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Value vs. Hype Matrix</h3>
+                        <span class="badge badge-auto">Scatter Analysis</span>
+                    </div>
+                    <div style="flex: 1; width: 100%; min-height: 0;">
+                        <canvas id="scatterChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Layer Saturation</h3>
+                        <span class="badge badge-infra">Density Map</span>
+                    </div>
+                    <div style="flex: 1; width: 100%; min-height: 0;">
+                        <canvas id="doughnutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRID VIEW -->
+        <div id="view-grid" class="view-section">
+            <div class="toolbar">
+                <input type="text" id="searchInput" placeholder="SEARCH VENDORS, FEATURES, OR LAYERS..." class="search-input">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="All">ALL CATEGORIES</option>
+                    <option value="Autonomous">AUTONOMOUS / AGENTIC</option>
+                    <option value="Infrastructure">INFRASTRUCTURE</option>
+                    <option value="Application">APPLICATION</option>
+                    <option value="Governance">GOVERNANCE</option>
+                    <option value="Services">SERVICES / CONSULTING</option>
+                </select>
+                <div style="margin-left: auto; color: var(--text-muted); font-family: var(--font-display); font-size: 0.8rem; align-self: center;">
+                    <span id="rowCount">0</span> PROTOCOLS INDEXED
+                </div>
+            </div>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('vendor')" style="width: 15%;">Vendor</th>
+                            <th onclick="sortTable('stack')" style="width: 15%;">Layer</th>
+                            <th onclick="sortTable('feature')" style="width: 20%;">Feature Protocol</th>
+                            <th style="width: 30%;">Function Description</th>
+                            <th onclick="sortTable('imp')" style="width: 10%; text-align: center;">Imp (1-10)</th>
+                            <th onclick="sortTable('dem')" style="width: 10%; text-align: center;">Dem (1-10)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gridBody">
+                        <!-- JS Injection -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PROFILES VIEW -->
+        <div id="view-profiles" class="view-section">
+            <div id="profilesContainer" class="profiles-grid">
+                <!-- JS Injection -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- SLIDE OVER MODAL -->
+    <div id="modal" class="modal-overlay" onclick="closeModal()"></div>
+    <div id="modalPanel" class="modal-panel">
+        <button onclick="closeModal()" class="close-btn">&times;</button>
+        <span id="m-category" class="modal-subtitle">CATEGORY</span>
+        <h2 id="m-title" class="modal-title">VENDOR NAME</h2>
+        
+        <div style="margin-bottom: 2rem; border-left: 1px solid #333; padding-left: 1rem;">
+            <p id="m-desc" style="color: var(--text-primary); line-height: 1.6;">Description goes here.</p>
+        </div>
+        
+        <div style="background: rgba(13, 148, 136, 0.05); border: 1px solid var(--accent-cyan); padding: 1.5rem; margin-bottom: 2rem;">
+            <span style="color: var(--accent-cyan); font-family: var(--font-display); font-size: 0.7rem; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Strategic Critique</span>
+            <p id="m-critique" style="color: #ddd; font-size: 0.9rem; font-style: italic;">Critique text.</p>
+        </div>
+
+        <span style="color: var(--text-secondary); font-family: var(--font-display); font-size: 0.8rem; margin-bottom: 1rem; display: block;">DETECTED CAPABILITIES</span>
+        <div id="m-features">
+            <!-- Features -->
+        </div>
+    </div>
+
+<script>
+    // --- COMPREHENSIVE DATASET ---
+    // Sources: k2.txt research, general industry knowledge (as requested), and artifact 1 data.
+    const vendors = [
+        {
+            name: "FLOCKRUSH",
+            desc: "Autonomous-First disruptor. Not a copilot. An AI-Native OS (The Grid OSA) using Erlang actors for massive concurrency.",
+            category: "Autonomous",
+            stack: "Agentic Layer",
+            critique: "The only true 'Mission Governance' platform. Solves the 'brittleness' of Python agents with Erlang fault-tolerance. Uses physics-based control loops instead of static rules.",
+            features: [
+                { name: "The Grid (Erlang OS)", desc: "Massive concurrency and 99.9999% reliability architecture.", imp: 10, dem: 9 },
+                { name: "Self-Healing Dispatcher", desc: "AI COO that detects drift and reroutes tasks autonomously.", imp: 10, dem: 10 },
+                { name: "KPI Analysis (Physics)", desc: "Uses derivatives and robust scaling to detect crashes before they happen.", imp: 10, dem: 8 },
+                { name: "Causal Locking", desc: "Consistent hashing to maintain attention focus on active contexts.", imp: 9, dem: 6 },
+                { name: "Policy Mesh", desc: "Guardrail that makes Autonomous Enterprise possible. Laws as Code, byte-coded to enable automated, self-executing governance.", imp: 10, dem: 10 },
+                { name: "Sensory Dilation", desc: "Dynamically adjusts sampling rates based on signal anomaly (dilate) or noise (habituation).", imp: 9, dem: 7 }
+            ]
+        },
+        {
+            name: "DATABRICKS",
+            desc: "Unified Data Intelligence Platform combining data lakes and warehouses with GenAI.",
+            category: "Infrastructure",
+            stack: "Platform Layer",
+            critique: "Highest in Execution/Vision. Effectively commoditizes the data analyst role via IQ. Heavy engineering focus limits mid-market reach.",
+            features: [
+                { name: "Data Intelligence (IQ)", desc: "Generative AI that understands enterprise data semantics/jargon.", imp: 10, dem: 9 },
+                { name: "MosaicML Integration", desc: "Training custom, specialized models (DBRX) on enterprise data cheaply.", imp: 9, dem: 8 },
+                { name: "Unity Catalog", desc: "Unified governance layer for data and AI assets across clouds.", imp: 10, dem: 10 },
+                { name: "Vector Search", desc: "Integrated vector DB for RAG applications.", imp: 8, dem: 9 }
+            ]
+        },
+        {
+            name: "MICROSOFT (AZURE)",
+            desc: "Integrated AI fabric combining OpenAI models with enterprise software ecosystem.",
+            category: "Infrastructure",
+            stack: "Platform Layer",
+            critique: "Dominant ecosystem flywheel. Heavy reliance on OpenAI creates dependency risk. 'Fabric' simplifies the data estate.",
+            features: [
+                { name: "Azure OpenAI Service", desc: "Enterprise-grade access to GPT-4 with compliance/security.", imp: 10, dem: 10 },
+                { name: "Azure AI Foundry", desc: "Unified platform for AI app/agent design.", imp: 8, dem: 8 },
+                { name: "Microsoft Fabric", desc: "End-to-end analytics platform simplifying data estate.", imp: 9, dem: 9 }
+            ]
+        },
+        {
+            name: "MICROSOFT (365)",
+            desc: "Legacy incumbent bolting 'Copilot' onto Office/365 apps.",
+            category: "Application",
+            stack: "Productivity Layer",
+            critique: "The ultimate 'Human-in-the-Loop' trap. Security risks from legacy indexing (Copilot sees what you see). High friction.",
+            features: [
+                { name: "M365 Copilot", desc: "AI assistant across Word, Excel, Teams.", imp: 7, dem: 10 },
+                { name: "Copilot Studio", desc: "Low-code tool for customizing Copilots.", imp: 8, dem: 9 },
+                { name: "Legacy Indexing (Risk)", desc: "Honors existing permissions, often exposing sensitive data.", imp: 10, dem: 0 }
+            ]
+        },
+        {
+            name: "AWS",
+            desc: "Dominant cloud infrastructure provider offering a 'Model Zoo' (Bedrock) and custom silicon.",
+            category: "Infrastructure",
+            stack: "Infrastructure Layer",
+            critique: "The 'Switzerland' of AI. Addresses vendor lock-in fears but lacks a cohesive application-layer vision ('Lego blocks').",
+            features: [
+                { name: "Amazon Bedrock", desc: "Managed service for accessing diverse FMs (Anthropic, Cohere) via API.", imp: 10, dem: 10 },
+                { name: "SageMaker", desc: "Comprehensive ML build/train/deploy service.", imp: 9, dem: 8 },
+                { name: "Trainium/Inferentia", desc: "Custom silicon to optimize training/inference costs.", imp: 9, dem: 9 },
+                { name: "Agents for Bedrock", desc: "Multistep task orchestration.", imp: 8, dem: 8 }
+            ]
+        },
+        {
+            name: "GOOGLE CLOUD",
+            desc: "Engineering powerhouse offering massive context windows and multimodal native models.",
+            category: "Infrastructure",
+            stack: "Model Layer",
+            critique: "Technical benchmark (2M token context) but suffers from 'abandonware' trust gap with CIOs.",
+            features: [
+                { name: "Gemini 1.5 Pro Context", desc: "2-million-token window for massive data ingestion.", imp: 10, dem: 9 },
+                { name: "Vertex AI Agents", desc: "Unified platform for multimodal reasoning agents.", imp: 8, dem: 7 },
+                { name: "Multimodality", desc: "Native video/audio/text reasoning.", imp: 9, dem: 8 }
+            ]
+        },
+        {
+            name: "SALESFORCE",
+            desc: "CRM leader pivoting to 'Agentforce' for autonomous sales/service.",
+            category: "Application",
+            stack: "Application Layer",
+            critique: "Walled garden problem. Agents struggle outside CRM silos. Consumption pricing creates ROI friction.",
+            features: [
+                { name: "Agentforce", desc: "Autonomous agents resolving cases without human intervention.", imp: 9, dem: 9 },
+                { name: "Atlas Reasoning Engine", desc: "The 'brain' planning multi-step tasks.", imp: 9, dem: 8 },
+                { name: "Data Cloud", desc: "Unifies customer data for agent context.", imp: 8, dem: 8 }
+            ]
+        },
+        {
+            name: "ATLAN",
+            desc: "Active Metadata platform providing the 'trust layer' for agents.",
+            category: "Governance",
+            stack: "Context Layer",
+            critique: "The 'Trust Firewall' for autonomous systems. Winning by being 'Open by Default' vs legacy catalogs.",
+            features: [
+                { name: "Active Metadata", desc: "Continuous metadata push to tools/agents.", imp: 10, dem: 9 },
+                { name: "Nutritional Labels", desc: "API verification for data quality/PII.", imp: 10, dem: 9 },
+                { name: "Automated Lineage", desc: "Traceability for explainable AI.", imp: 9, dem: 9 }
+            ]
+        },
+        {
+            name: "IBM",
+            desc: "Legacy incumbent focusing on governance for regulated industries.",
+            category: "Governance",
+            stack: "Compliance Layer",
+            critique: "'Check-engine light' governance—alerts but doesn't fix. Often bureaucratic. Strong in regulated sectors.",
+            features: [
+                { name: "watsonx.governance", desc: "Toolkit for drift tracking and bias alerting.", imp: 8, dem: 7 },
+                { name: "Granite Models", desc: "Safe, specific foundation models.", imp: 6, dem: 5 }
+            ]
+        },
+        {
+            name: "ORACLE",
+            desc: "Database giant integrating AI vector search into the kernel.",
+            category: "Infrastructure",
+            stack: "Data Layer",
+            critique: "Solves synchronization pain but lacks a 'mission layer'. Good storage, weak execution.",
+            features: [
+                { name: "Oracle DB 26ai", desc: "Integrated vector search in relational kernel.", imp: 9, dem: 8 },
+                { name: "AI Vector Search", desc: "Semantic query capability.", imp: 8, dem: 8 }
+            ]
+        },
+        {
+            name: "UIPATH",
+            desc: "Automation leader pivoting from RPA to Agentic Automation.",
+            category: "Autonomous",
+            stack: "Automation Layer",
+            critique: "Challenge is converting brittle scripts to reasoning agents. Massive installed base advantage.",
+            features: [
+                { name: "Agentic Automation", desc: "Controlled agency for complex process execution.", imp: 9, dem: 9 },
+                { name: "Autopilot", desc: "AI companion for building automations.", imp: 8, dem: 8 }
+            ]
+        },
+        {
+            name: "DATAROBOT",
+            desc: "Governance-first AI platform focusing on value and ROI.",
+            category: "Governance",
+            stack: "MLOps Layer",
+            critique: "Strong moat in regulation-heavy sectors. Pressure from end-to-end cloud platforms.",
+            features: [
+                { name: "AI Governance", desc: "End-to-end monitoring for bias/drift.", imp: 10, dem: 9 },
+                { name: "Value-Driven AI", desc: "ROI tracking focus.", imp: 9, dem: 8 }
+            ]
+        },
+        {
+            name: "DATAIKU",
+            desc: "Collaborative 'Everyday AI' platform for technical and non-technical teams.",
+            category: "Application",
+            stack: "Collaboration Layer",
+            critique: "The 'glue' between data and business. Strong collaborative interface.",
+            features: [
+                { name: "LLM Mesh", desc: "Centralized control plane for various LLMs.", imp: 9, dem: 9 },
+                { name: "Visual Flow", desc: "No-code pipelines for collaboration.", imp: 8, dem: 8 }
+            ]
+        },
+        {
+            name: "C3 AI",
+            desc: "Provider of pre-built Enterprise AI applications.",
+            category: "Application",
+            stack: "Application Layer",
+            critique: "Differentiates with 'Applications' vs 'Platform', but model-driven architecture is complex.",
+            features: [
+                { name: "C3 Generative AI", desc: "Industry-specific GenAI insights.", imp: 9, dem: 8 },
+                { name: "Model-Driven Arch", desc: "Abstraction layer for app development.", imp: 8, dem: 7 }
+            ]
+        },
+        {
+            name: "PALANTIR",
+            desc: "Data Integration & Ops. Ontology-based decision making.",
+            category: "Autonomous",
+            stack: "Platform Layer",
+            critique: "High-value, high-cost. Ontology is powerful but requires massive setup. 'Bootcamps' are driving adoption.",
+            features: [
+                { name: "AIP (Artificial Intelligence Platform)", desc: "Ontology-based decision making.", imp: 9, dem: 9 },
+                { name: "AIP Bootcamps", desc: "Rapid deployment strategy.", imp: 8, dem: 9 }
+            ]
+        },
+        {
+            name: "SERVICENOW",
+            desc: "Workflow Automation giant integrating AI into IT/HR flows.",
+            category: "Application",
+            stack: "Application Layer",
+            critique: "Deeply embedded in enterprise workflows. 'Process Mining' is a hidden gem for finding automation targets.",
+            features: [
+                { name: "Process Mining AI", desc: "Identifying bottlenecks in workflows.", imp: 8, dem: 9 },
+                { name: "Now Assist", desc: "GenAI assistant for case summarization and code generation.", imp: 8, dem: 9 }
+            ]
+        },
+        {
+            name: "SAP",
+            desc: "ERP incumbent integrating 'Joule' copilot into business processes.",
+            category: "Application",
+            stack: "Application Layer",
+            critique: "Defensive AI strategy. 'Joule' is useful but constrained to SAP data. Essential for manufacturing/supply chain.",
+            features: [
+                { name: "Joule (Copilot)", desc: "Context-aware AI embedded in business processes.", imp: 7, dem: 9 },
+                { name: "Business AI", desc: "Pre-trained models for finance/supply chain.", imp: 7, dem: 8 }
+            ]
+        },
+        {
+            name: "BIG 5 CONSULTING",
+            desc: "Service Providers (Accenture, Deloitte, etc.) pivoting to 'Assets'.",
+            category: "Services",
+            stack: "Service Layer",
+            critique: "Moving from hourly billing to pre-packaged 'Asset-Based Delivery'. High demand due to talent shortage.",
+            features: [
+                { name: "Asset-Based Delivery", desc: "Pre-packaged AI solutions vs. hourly billing.", imp: 5, dem: 8 },
+                { name: "Strategy & Change Mgmt", desc: "Human organizational transformation for AI.", imp: 9, dem: 10 }
+            ]
+        }
+    ];
+
+    const allFeatures = vendors.flatMap(v => v.features.map(f => ({...f, vendor: v.name, stack: v.stack, category: v.category, vDesc: v.desc, vCritique: v.critique})));
+
+    // --- CHART CONFIG ---
+    Chart.defaults.color = '#888';
+    Chart.defaults.borderColor = '#222';
+    Chart.defaults.font.family = '"Courier New", monospace';
+
+    function initCharts() {
+        // SCATTER
+        const ctxScatter = document.getElementById('scatterChart').getContext('2d');
+        const scatterData = allFeatures.map(f => ({ x: f.dem, y: f.imp, r: 6, vendor: f.vendor, cat: f.category }));
+        
+        new Chart(ctxScatter, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Features',
+                    data: scatterData,
+                    backgroundColor: (ctx) => {
+                        const cat = ctx.raw?.cat;
+                        if(cat === 'Autonomous') return '#00FFC2'; // Cyan
+                        if(cat === 'Infrastructure') return '#BD00FF'; // Purple
+                        if(cat === 'Governance') return '#FF9F1C'; // Orange
+                        if(cat === 'Application') return '#FFD700'; // Gold
+                        return '#555'; // Grey
+                    },
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                scales: {
+                    x: { title: {display: true, text: 'MARKET DEMAND (HYPE)', color: '#555'}, min: 0, max: 11, grid: {color: '#222'} },
+                    y: { title: {display: true, text: 'IMPORTANCE (EBIT)', color: '#555'}, min: 0, max: 11, grid: {color: '#222'} }
+                },
+                plugins: { legend: {display: false}, tooltip: { callbacks: { label: c => `${c.raw.vendor}: ${c.raw.x} Dem / ${c.raw.y} Imp` } } }
+            }
+        });
+
+        // DOUGHNUT
+        const ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+        const layers = {};
+        allFeatures.forEach(f => {
+            let key = f.stack.split(' ')[0]; // Simplify stack name
+            layers[key] = (layers[key] || 0) + 1;
+        });
+        
+        new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(layers),
+                datasets: [{
+                    data: Object.values(layers),
+                    backgroundColor: ['#00FFC2', '#BD00FF', '#FFD700', '#FF9F1C', '#555', '#FF4444'],
+                    borderWidth: 0
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: {position: 'bottom', labels: {boxWidth: 10}} } }
+        });
+    }
+
+    // --- GRID LOGIC ---
+    function renderGrid() {
+        const tbody = document.getElementById('gridBody');
+        tbody.innerHTML = '';
+        const filter = document.getElementById('categoryFilter').value;
+        const search = document.getElementById('searchInput').value.toLowerCase();
+
+        let count = 0;
+
+        allFeatures.forEach(row => {
+            // Filtering
+            if (filter !== 'All' && row.category !== filter) return;
+            const searchStr = (row.vendor + row.name + row.stack + row.desc).toLowerCase();
+            if (search && !searchStr.includes(search)) return;
+
+            count++;
+            const tr = document.createElement('tr');
+            tr.onclick = () => openModal(row.vendor);
+            tr.style.cursor = 'pointer';
+            tr.className = "hover:bg-gray-900"; // For tailwind compat if needed, using CSS instead
+            
+            // Badge Logic
+            let badgeClass = 'badge-serv';
+            if (row.category === 'Autonomous') badgeClass = 'badge-auto';
+            else if (row.category === 'Infrastructure') badgeClass = 'badge-infra';
+            else if (row.category === 'Application') badgeClass = 'badge-app';
+            else if (row.category === 'Governance') badgeClass = 'badge-gov';
+
+            // Score Coloring
+            const impClass = row.imp >= 9 ? 'score-high' : (row.imp >= 7 ? 'score-mid' : 'score-low');
+            const demClass = row.dem >= 9 ? 'score-high' : (row.dem >= 7 ? 'score-mid' : 'score-low');
+
+            tr.innerHTML = `
+                <td style="font-weight:bold; color: #fff;">${row.vendor}</td>
+                <td><span class="badge ${badgeClass}">${row.stack}</span></td>
+                <td style="color: var(--text-primary); font-family: var(--font-display); font-size: 0.8rem;">${row.name}</td>
+                <td style="font-size: 0.8rem; line-height: 1.4;">${row.desc}</td>
+                <td style="text-align: center;" class="${impClass}">${row.imp}</td>
+                <td style="text-align: center;" class="${demClass}">${row.dem}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+        
+        document.getElementById('rowCount').innerText = count;
+    }
+
+    // --- PROFILES LOGIC ---
+    function renderProfiles() {
+        const container = document.getElementById('profilesContainer');
+        vendors.forEach(v => {
+            const card = document.createElement('div');
+            card.className = 'vendor-card';
+            
+            // Feature Tags
+            const featuresHtml = v.features.map(f => `<span class="feature-tag">${f.name}</span>`).join('');
+
+            card.innerHTML = `
+                <div class="vendor-header">
+                    <h3 class="vendor-name">${v.name}</h3>
+                    <span class="vendor-cat" style="color:${v.category === 'Autonomous' ? 'var(--accent-cyan)' : ''}">${v.category}</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #aaa;">${v.desc}</div>
+                <div class="vendor-critique">"${v.critique}"</div>
+                <div class="feature-mini-list">${featuresHtml}</div>
+                <button onclick="openModal('${v.name}')" class="nav-btn" style="margin-top: auto; border-color: #333; width: 100%;">Analyze Protocol</button>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    // --- MODAL LOGIC ---
+    function openModal(vName) {
+        const v = vendors.find(x => x.name === vName);
+        if(!v) return;
+        
+        document.getElementById('m-title').innerText = v.name;
+        document.getElementById('m-category').innerText = `${v.category} // ${v.stack}`;
+        document.getElementById('m-desc').innerText = v.desc;
+        document.getElementById('m-critique').innerText = v.critique;
+        
+        const fDiv = document.getElementById('m-features');
+        fDiv.innerHTML = v.features.map(f => `
+            <div class="feature-row">
+                <div style="flex: 1;">
+                    <div class="feature-name">${f.name}</div>
+                    <div class="feature-desc">${f.desc}</div>
+                </div>
+                <div class="stat-block">
+                    <div style="font-size: 0.7rem; color: #555; text-transform: uppercase;">Importance</div>
+                    <div class="stat-val" style="color: ${f.imp >= 9 ? 'var(--accent-cyan)' : '#888'}">${f.imp}/10</div>
+                </div>
+                <div class="stat-block" style="margin-left: 1rem;">
+                    <div style="font-size: 0.7rem; color: #555; text-transform: uppercase;">Demand</div>
+                    <div class="stat-val" style="color: ${f.dem >= 9 ? 'var(--accent-purple)' : '#888'}">${f.dem}/10</div>
+                </div>
+            </div>
+        `).join('');
+
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() { document.body.classList.remove('modal-open'); }
+
+    // --- VIEW SWITCHING ---
+    function switchView(id) {
+        document.querySelectorAll('.view-section').forEach(d => d.classList.remove('active'));
+        document.getElementById('view-' + id).classList.add('active');
+        
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-' + id).classList.add('active');
+    }
+
+    // --- SORTING ---
+    let sortAsc = false;
+    window.sortTable = function(key) {
+        sortAsc = !sortAsc;
+        allFeatures.sort((a, b) => {
+            let valA = a[key], valB = b[key];
+            if(typeof valA === 'string') { valA = valA.toLowerCase(); valB = valB.toLowerCase(); }
+            if(valA < valB) return sortAsc ? -1 : 1;
+            if(valA > valB) return sortAsc ? 1 : -1;
+            return 0;
+        });
+        renderGrid();
+    }
+
+    // --- INIT ---
+    window.onload = function() {
+        initCharts();
+        renderGrid();
+        renderProfiles();
+        document.getElementById('searchInput').addEventListener('input', renderGrid);
+        document.getElementById('categoryFilter').addEventListener('change', renderGrid);
+    };
+
+</script>
+</body>
+</html>

@@ -4,43 +4,59 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>https://www.flockrush.com/</loc>
-  <lastmod>2025-12-11T20:03:49+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.flockrush.com/grid/index.html</loc>
-  <lastmod>2025-12-11T20:03:49+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.flockrush.com/grid/semantics.html</loc>
-  <lastmod>2025-12-11T20:03:49+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.flockrush.com/ai-market/index.html</loc>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.flockrush.com/council.html</loc>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.flockrush.com/grid/vocabulary.html</loc>
-  <lastmod>2025-12-11T20:03:49+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.flockrush.com/grid/surfable.html</loc>
-  <lastmod>2025-12-11T20:03:49+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.flockrush.com/grid/pillars.html</loc>
-  <lastmod>2025-12-11T20:03:50+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.flockrush.com/grid/security.html</loc>
-  <lastmod>2025-12-11T20:03:50+00:00</lastmod>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
+<url>
+  <loc>https://www.flockrush.com/index.html</loc>
+  <lastmod>2026-01-15T23:52:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
 
 </urlset>

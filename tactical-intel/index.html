@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tactical Intelligence Hub | Flockrush Grid</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :root { --bg-deep: #0b0b0b; --accent-teal: #19C9A9; --accent-crimson: #F70F4D; --glass-border: #272727; --text-secondary: #94A3B8; --font-mono: "IBM Plex Mono", monospace; }
+        body { background-color: var(--bg-deep); color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+       .grid-bg { background-image: linear-gradient(var(--glass-border) 1px, transparent 1px), linear-gradient(90deg, var(--glass-border) 1px, transparent 1px); background-size: 50px 50px; background-color: #0b0b0b; position: fixed; inset: 0; z-index: -1; opacity: 0.2; }
+       .nav-hq { padding: 1.5rem 2rem; border-bottom: 1px solid var(--glass-border); background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); }
+       .nav-hq a { color: var(--text-secondary); text-decoration: none; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 2px; }
+       .header { padding: 5rem 2rem 3rem; text-align: left; max-width: 1200px; margin: 0 auto; }
+       .header h1 { font-family: var(--font-mono); font-size: 2.5rem; text-transform: uppercase; margin-top: 1rem; }
+       .proword { color: var(--accent-teal); font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 4px; font-weight: 600; }
+       .intel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 6rem; padding: 0 2rem; }
+       .intel-card { background: rgba(22, 22, 22, 0.9); border: 1px solid var(--glass-border); border-radius: 4px; overflow: hidden; transition: 0.4s; text-decoration: none; color: inherit; }
+       .intel-card:hover { border-color: var(--accent-teal); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+       .intel-img { width: 100%; aspect-ratio: 16/9; background: #000; border-bottom: 1px solid var(--glass-border); position: relative; overflow: hidden; }
+       .intel-img img { width: 100%; height: 100%; object-cover: cover; opacity: 0.6; transition: 0.5s; }
+       .intel-card:hover.intel-img img { opacity: 1; transform: scale(1.05); }
+       .card-body { padding: 2rem; }
+       .card-body h3 { font-family: var(--font-mono); text-transform: uppercase; margin: 0 0 1rem; color: #fff; }
+       .card-body p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+       .status-dot { width: 8px; height: 8px; background: var(--accent-teal); border-radius: 50%; box-shadow: 0 0 10px var(--accent-teal); display: inline-block; margin-right: 8px; }
+       .mas-banner { background: #161616; border: 1px solid var(--accent-crimson); padding: 1.5rem; margin: 0 2rem 4rem; max-width: 1140px; margin-inline: auto; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="nav-hq"><a href="#"><i class="ri-radar-line"></i> MISSION CONTROL // STRATEGIC ASSET ACCESS</a></div>
+    
+    <header class="header">
+        <span class="proword">Restricted Access // Sector: Tactical Intelligence</span>
+        <h1>The Anatomy of the <span style="color:var(--accent-teal)">Sovereign Organism.</span></h1>
+    </header>
+
+    <div class="mas-banner">
+        <p style="margin: 0; font-size: 1.1rem; color: #fff;">
+            <i class="ri-error-warning-line" style="color:var(--accent-crimson)"></i> 
+            <strong>CRITICAL SIGNAL:</strong> Gartner reports a 1,445% surge in MAS inquiries. Legacy software is facing an architectural deadlock. 
+        </p>
+    </div>
+
+    <div class="intel-grid">
+        <a href="faculties.html" class="intel-card">
+            <div class="intel-img"><img src="../assets/images/morphogenesis.webp" alt="Architecture of Isolation"></div>
+            <div class="card-body">
+                <h3><div class="status-dot"></div>Architecture of Isolation</h3>
+                <p>Move beyond "Apps." Discover the Erlang Umbrella model of isolated faculties—where fault-tolerant organs ensure enterprise resiliency.</p>
+            </div>
+        </a>
+
+        <a href="morphogenesis.html" class="intel-card">
+            <div class="intel-img"><img src="../assets/images/thought.webp" alt="Morphogenesis Engine"></div>
+            <div class="card-body">
+                <h3><div class="status-dot"></div>The Velocity of Thought</h3>
+                <p>How the EVF "Furnace" stress-tests strategic hypotheses, transforming raw thoughts into validated, autonomous Sovereign DNA in minutes.</p>
+            </div>
+        </a>
+
+        <a href="sentinels.html" class="intel-card">
+            <div class="intel-img"><img src="../assets/images/sentinels.webp" alt="Governance Mesh"></div>
+            <div class="card-body">
+                <h3><div class="status-dot"></div>The Legislative Mandate</h3>
+                <p>Establishing the "Human-on-the-Loop" standard. How executive legislators define the Policy Mesh that sets the autonomous swarm free.</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign AI Diagnostic | Tech Advisory Panel</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/grid/favicon.svg" />    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :root { --bg-deep: #0b0b0b; --accent-teal: #19C9A9; --accent-crimson: #F70F4D; --glass-bg: rgba(22, 22, 22, 0.9); --glass-border: #272727; --text-primary: #F8FAFC; --text-secondary: #94A3B8; --font-mono: "IBM Plex Mono", monospace; }
+        body { background-color: var(--bg-deep); background-image: radial-gradient(circle at 0% 0%, rgba(25, 201, 169, 0.08) 0%, transparent 50%), radial-gradient(circle at 100% 100%, rgba(247, 15, 77, 0.08) 0%, transparent 50%); color: var(--text-primary); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
+     .nav-hq { padding: 1.5rem 2rem; border-bottom: 1px solid var(--glass-border); background: rgba(0,0,0,0.5); }
+     .nav-hq a { color: var(--text-secondary); text-decoration: none; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 2px; }
+     .hero { text-align: center; padding: 6rem 1rem 4rem; }
+     .hero h1 { font-family: var(--font-mono); font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 1rem; text-transform: uppercase; }
+     .diagnostic-container { max-width: 850px; margin: 0 auto 6rem; padding: 0 2rem; }
+     .glass-diagnostic { background: var(--glass-bg); backdrop-filter: blur(50px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 4rem; box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.9); position: relative; }
+     .question-block { margin-bottom: 3rem; display: none; }
+     .question-block.active { display: block; }
+     .q-label { color: var(--accent-teal); font-family: var(--font-mono); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 4px; display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; font-weight: 600; }
+     .q-text { font-size: 1.6rem; font-weight: 700; margin-bottom: 2.5rem; letter-spacing: -0.5px; line-height: 1.3; }
+     .form-select,.form-input { width: 100%; padding: 1.4rem; background: #161616; border: 1px solid var(--glass-border); border-radius: 4px; color: #fff; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin-bottom: 1rem; box-sizing: border-box; }
+     .form-select:hover { border-color: var(--accent-teal); box-shadow: 0 0 15px rgba(25, 201, 169, 0.1); }
+     .progress-bar { height: 2px; background: #272727; margin-bottom: 3.5rem; overflow: hidden; }
+     .progress-fill { height: 100%; background: var(--accent-teal); width: 14%; transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 20px var(--accent-teal); }
+     .btn-nav { padding: 1.2rem 3.5rem; border-radius: 2px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; border: none; transition: 0.4s; background: var(--accent-teal); color: #0b0b0b; float: right; font-size: 0.9rem; }
+     .btn-nav:hover { background: #fff; box-shadow: 0 0 40px rgba(25, 201, 169, 0.5); transform: translateY(-1px); }
+     .loop-closure { text-align: center; display: none; }
+     .loop-closure h2 { color: var(--accent-teal); font-family: var(--font-mono); font-size: 2.2rem; font-weight: 800; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+    <div class="nav-hq"><a href="#"><i class="ri-shield-flash-line"></i> SYSTEM STATUS: ABOS ACTIVE / ENCRYPTED HQ</a></div>
+    
+    <section class="hero">
+        <span class="q-label" style="justify-content: center;"><i class="ri-government-line"></i> CONSTITUTIONAL AUDIT: SOVEREIGN DNA ASSESSMENT</span>
+        <h1>Legislate the <span style="color:var(--accent-teal)">Autonomous Era.</span></h1>
+        <p style="color: var(--text-secondary); max-width: 700px; margin: 2rem auto; font-size: 1.2rem;">Benchmark your enterprise against the <strong>$87M "Digital Negligence" threshold</strong>. Members receive early access to the 2026 State of ABOS Report.</p>
+    </section>
+
+    <div class="diagnostic-container">
+        <div class="glass-diagnostic">
+            <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+            
+            <form id="diagForm" action="https://formspree.io/f/xdalarpl" method="POST">
+                <input type="hidden" name="_next" value="https://www.flockrush.com/council-thank-you">
+                
+                <div class="question-block active" id="q1">
+                    <span class="q-label">GROW PILLAR // STRATEGIC AMBITION</span>
+                    <p class="q-text">In which domain must your organization maintain <strong>Sovereign Authority</strong> rather than relying on public cloud assistants?</p>
+                    <select name="ambition" class="form-select">
+                        <option value="ops">High-Complexity Operations (The Muscles)</option>
+                        <option value="risk">High-Regulation Compliance (The Immune System)</option>
+                        <option value="scale">Enterprise-wide Intelligence (The Organism)</option>
+                    </select>
+                </div>
+
+                <div class="question-block" id="q2">
+                    <span class="q-label">AWARE PILLAR // THE TRANSLATION GAP</span>
+                    <p class="q-text">Are your current AI outputs suffering from the <strong>"Meaning Mismatch"</strong>—where technical capacity fails to translate into strategic outcomes?</p>
+                    <select name="quality" class="form-select">
+                        <option value="high">Significant Translation Gap (Dark Data)</option>
+                        <option value="medium">Unmanaged Drift (Hallucinations)</option>
+                        <option value="none">Deterministic Outcomes (Architected Certainty)</option>
+                    </select>
+                </div>
+
+                <div class="question-block" id="q3">
+                    <span class="q-label">PROTECT PILLAR // LEGAL ACCOUNTABILITY</span>
+                    <p class="q-text">Who authorizes the <strong>Policy Mesh</strong> when an autonomous agent makes a state-transition decision affecting your balance sheet?</p>
+                    <select name="accountability" class="form-select">
+                        <option value="cio">The CIO / CTO Office (Administrative Role)</option>
+                        <option value="sme">The Departmental SME (The Legislator Role)</option>
+                        <option value="none">No formal Human-on-the-Loop framework exists</option>
+                    </select>
+                </div>
+
+                <div class="question-block" id="q4">
+                    <span class="q-label">FACULTY ARCHITECTURE // WORKFORCE EVOLUTION</span>
+                    <p class="q-text">By 2026, do you plan to manage AI as "Tools" for staff or as <strong>Faculties</strong> with isolated <strong>Umbrella Identities</strong>?</p>
+                    <select name="workforce" class="form-select">
+                        <option value="tools">Copilots (Stateless Assistance Model)</option>
+                        <option value="sentinels">Independent Sentinels (Stateful Executive Model)</option>
+                        <option value="umbrella">Full Umbrella Architecture (Fault Isolation)</option>
+                    </select>
+                </div>
+
+                <div class="question-block" id="q5">
+                    <span class="q-label">PHYSICS PILLAR // SYSTEMIC ROADBLOCKS</span>
+                    <p class="q-text">What percentage of your autonomous scaling is blocked by legacy logic that cannot handle real-time agent state?</p>
+                    <input type="range" name="legacy_brake" min="0" max="100" class="form-input">
+                    <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-secondary); font-family:var(--font-mono); font-weight:bold;"><span>0% (SOVEREIGN DNA)</span><span>100% (LEGACY LIMP)</span></div>
+                </div>
+
+                <div class="question-block" id="q6">
+                    <span class="q-label">THE SPEED OF THOUGHT // HUMAN LATENCY</span>
+                    <p class="q-text">Average weeks of latency between an executive <strong>Mandate</strong> change and <strong>Active Agent</strong> execution?</p>
+                    <select name="latency" class="form-select">
+                        <option value="short">1-2 Weeks (Tactical Advantage)</option>
+                        <option value="medium">3-6 Weeks (Standard Enterprise)</option>
+                        <option value="long">7+ Weeks (Digital Negligence)</option>
+                    </select>
+                </div>
+
+                <div class="question-block" id="q7">
+                    <span class="q-label">THE VAULT // SOURCING STRATEGY</span>
+                    <p class="q-text">Will you migrate high-stakes workloads to a <strong>Sovereign Stack</strong> to eliminate public cloud intermediary risk?</p>
+                    <input type="email" name="email" class="form-input" placeholder="commander@fortune500.com" required>
+                    <select name="stack" class="form-select">
+                        <option value="yes">Yes (Direct-to-Kernel execution)</option>
+                        <option value="hybrid">Hybrid (Sensitive data in The Vault)</option>
+                        <option value="no">Public API Dependency</option>
+                    </select>
+                </div>
+
+                <div style="margin-top: 4rem; overflow: hidden;">
+                    <button type="button" class="btn-nav" onclick="nextStep()" id="nextBtn">Audit Next Faculty</button>
+                </div>
+            </form>
+
+            <div class="loop-closure" id="loopClosure">
+                <span class="q-label" style="justify-content: center;"><i class="ri-verified-badge-line"></i> Audit Authorized</span>
+                <h2>Thank you, Architect.</h2>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">Based on your latency metrics, your firm is currently paying a high <strong>"Trust Tax"</strong> to legacy vendors. Your Sovereign Index is being calculated.</p>
+                <p style="color: #fff; font-weight: 700; font-size: 1.2rem;">The Council for Autonomous Sovereignty is convening. Would you like to secure your invitation to the next <strong>Strategic Briefing</strong>?</p>
+                <button class="btn-nav" style="float:none; margin-top: 2.5rem;" onclick="document.getElementById('diagForm').submit()">Secure My Invitation</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1; const totalSteps = 7;
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                document.getElementById(`q${currentStep}`).classList.remove('active');
+                currentStep++;
+                document.getElementById(`q${currentStep}`).classList.add('active');
+                document.getElementById('progress').style.width = (currentStep / totalSteps) * 100 + '%';
+                if (currentStep === totalSteps) document.getElementById('nextBtn').innerText = "Ratify & Join Council";
+            } else { 
+                document.getElementById('diagForm').style.display = 'none';
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('loopClosure').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

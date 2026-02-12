@@ -1,119 +1,54 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>The Strategic Leapfrog Analysis | Flockrush Research</title>
-    <meta name="description" content="Technical validation of the Flockrush autopoietic architecture vs 2026 Market Consensus.">
+<head><title>Leapfrog Analysis | Flockrush</title> 
     <link rel="icon" type="image/svg+xml" href="../../assets/grid/favicon.svg" />    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "Flockrush Autopoietic Architecture vs. 2026 Market Consensus",
-      "keywords": "Autopoiesis, BEAM VM, Formal Verification, AI Swarms, Morphogenetic Engineering",
-      "articleSection": "Competitive Intelligence"
-    }
-    </script>
-
     <style>
-        :root {
-            --base-bg: #050505; --content-bg: #0A0F14;
-            --accent-cyan: #00FFC2; --accent-purple: #BD00FF;
-            --text-primary: #EDEDED; --text-secondary: #888;
-            --font-display: "Courier New", Courier, monospace;
-            --font-body: "Helvetica Neue", Arial, sans-serif;
-        }
+        :root { --base-bg: #050505; --accent-cyan: #00FFC2; --accent-purple: #BD00FF; --text-primary: #EDEDED; --font-display: "Courier New", Courier, monospace; --font-body: "Helvetica Neue", Arial, sans-serif; }
         body { background: var(--base-bg); color: var(--text-primary); font-family: var(--font-body); line-height: 1.8; margin: 0; }
-        .container { max-width: 950px; margin: 0 auto; padding: 4rem 2rem; }
-        h1, h2, h3 { font-family: var(--font-display); letter-spacing: -1px; margin-top: 3rem; }
-        h1 { font-size: 2.5rem; color: var(--accent-purple); border-left: 8px solid var(--accent-purple); padding-left: 1.5rem; }
-        h2 { font-size: 1.8rem; color: var(--accent-cyan); border-bottom: 1px solid #222; padding-bottom: 0.5rem; }
-        h3 { font-size: 1.3rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
-        .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 4rem; display: block; font-family: var(--font-display); }
-        p { color: #bbb; margin-bottom: 1.5rem; }
-        .tech-box { background: #0d1117; border: 1px solid #30363d; padding: 1.5rem; margin: 2rem 0; border-radius: 4px; }
-        .tech-box h4 { margin-top: 0; color: var(--accent-cyan); font-family: var(--font-display); }
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 3rem 0; font-size: 0.9rem; }
-        .comparison-table th { background: #111; text-align: left; padding: 1rem; border: 1px solid #333; color: var(--accent-cyan); }
-        .comparison-table td { padding: 1rem; border: 1px solid #222; }
-        nav { padding: 2rem 0; border-bottom: 1px solid #222; }
-        .back-link { color: var(--accent-cyan); text-decoration: none; font-family: var(--font-display); }
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        h1 { font-family: var(--font-display); font-size: 3.5rem; line-height: 1.1; color: #fff; }
+        h2 { font-family: var(--font-display); color: var(--accent-cyan); border-bottom: 1px solid #333; margin-top: 3rem; }
+        .subtitle { font-size: 1.2rem; color: #888; font-family: var(--font-display); margin-bottom: 3rem; display: block; }
+        p { font-size: 1.1rem; color: #ccc; margin-bottom: 1.5rem; }
+        .callout { background: #111; border-left: 4px solid var(--accent-purple); padding: 2rem; margin: 2rem 0; }
+        nav { padding: 1.5rem 0; border-bottom: 1px solid #222; font-family: var(--font-display); font-size: 0.8rem; }
+        .nav-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 20px; }
+        a { color: var(--accent-cyan); text-decoration: none; border: 1px solid transparent; padding: 2px 8px; }
+        .active { border: 1px solid var(--accent-cyan); color: #fff; }
     </style>
 </head>
 <body>
-
-<nav>
-    <div class="container" style="padding-top:0; padding-bottom:0;">
-        <a href="index.html" class="back-link">&lt; RETURN TO SEMANTICS</a>
-    </div>
-</nav>
-
+<nav><div class="nav-inner">
+    <a href="index.html">01_ONTOLOGY</a>
+    <a href="leapfrog.html" class="active">02_LEAPFROG</a>
+    <a href="runtime.html">03_RUNTIME</a>
+    <a href="governance.html">04_GOVERNANCE</a>
+    <a href="outcomes.html">05_OUTCOMES</a>
+</div></nav>
 <div class="container">
-    <h1>Strategic Leapfrog Analysis.</h1>
-    <span class="subtitle">Flockrush Autopoietic Architecture vs. 2026 Market Consensus.</span>
+    <h1>The Strategic Leapfrog.</h1>
+    <span class="subtitle">Validating the Autopoietic Architecture.</span>
 
-    <h2>Executive Summary</h2>
-    <p>
-        As the AI market stabilizes in 2026, a "Complexity Ceiling" has emerged. While adoption of multi-agent systems has surged 327%, current architectures (Agentic 1.0) are fracturing under the weight of Python-centric bottlenecks and rigid orchestration. 
-        <strong>Flockrush has effectively leapfrogged these limitations.</strong>
-    </p>
+    <h2>The "Pilot to Scale" Crisis</h2>
+    <p>By 2026, the global AI market has hit the <strong>Orchestration Plateau</strong>. While multi-agent deployments have surged 327%, they rely on fragile, human-defined graphs (LangGraph, CrewAI). If a novel situation arises, the agent cannot adapt its own topology—it simply crashes.</p>
 
-    <h2>1. The Orchestration Plateau</h2>
-    <p>
-        The 2026 market relies on <strong>Graph-Based Orchestration</strong> (LangGraph, CrewAI). This creates a "Declarative Trap" where engineers must foresee every failure mode. 
-    </p>
-    <div class="tech-box">
-        <h4>The Python Ceiling</h4>
-        Current best-practices are tethered to Python's Global Interpreter Lock (GIL). In massive multi-agent systems, this introduces "stop-the-world" latency. Flockrush replaces this with the <strong>BEAM/OTP</strong> runtime, designed for 99.9999999% uptime and preemptive scheduling.
-    </div>
-
-    <h2>2. Autopoiesis: From Script to Organism</h2>
-    <p>
-        While market systems are <em>allopoietic</em> (built by external force), Flockrush is <strong>autopoietic</strong>—it produces its own components and maintains its own boundaries.
-    </p>
     
-    <h3>Morphogenetic Engineering</h3>
-    <p>
-        Instead of drawing fixed graphs, Flockrush defines "Digital Gradients." Agents differentiate spontaneously based on information density, much like biological cells reacting to chemical gradients.
-    </p>
 
-    <h2>3. The Runtime Resilience Gap</h2>
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th>2026 Market Standard</th>
-                <th>Flockrush Architecture</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td><strong>Concurrency</strong></td><td>asyncio (Cooperative)</td><td><strong>Actor Model (Preemptive)</strong></td></tr>
-            <tr><td><strong>Isolation</strong></td><td>Shared Memory (Fragile)</td><td><strong>Share-nothing (Immune)</strong></td></tr>
-            <tr><td><strong>Fault Recovery</strong></td><td>Manual Retries</td><td><strong>Supervision Trees (Auto-Heal)</strong></td></tr>
-            <tr><td><strong>Safety</strong></td><td>Extrinsic Guardrails</td><td><strong>Runtime Formal Verification</strong></td></tr>
-        </tbody>
+    <h3>Morphogenetic Engineering vs. Graph Design</h3>
+    <p>While the market draws nodes and edges, Flockrush engineers the <strong>Rules of Emergence</strong>. This is Morphogenetic Engineering: designing local interaction rules (primitives) that allow the swarm to differentiate based on digital gradients of information density.</p>
+
+    <table style="width:100%; border-collapse: collapse; margin: 2rem 0; border: 1px solid #333;">
+        <tr style="background:#111; color: var(--accent-cyan); font-family: var(--font-display);">
+            <th style="padding:15px; text-align:left;">Feature</th>
+            <th style="padding:15px; text-align:left;">Market Standard (Allopoietic)</th>
+            <th style="padding:15px; text-align:left;">Flockrush (Autopoietic)</th>
+        </tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #222;">Primary Unit</td><td style="padding:15px; border-bottom:1px solid #222;">The "Bot"</td><td style="padding:15px; border-bottom:1px solid #222;">The "Agent" (Cognitive Emulation)</td></tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #222;">Control Logic</td><td style="padding:15px; border-bottom:1px solid #222;">Rule-based (If/Then)</td><td style="padding:15px; border-bottom:1px solid #222;">Probabilistic / Semantic</td></tr>
+        <tr><td style="padding:15px; border-bottom:1px solid #222;">Adaptability</td><td style="padding:15px; border-bottom:1px solid #222;">Fixed Topology</td><td style="padding:15px; border-bottom:1px solid #222;">Self-Rewriting Topology</td></tr>
     </table>
-    
 
-    <h2>4. Intrinsic Governance</h2>
-    <p>
-        Standard "Responsible AI" relies on gatekeepers. Flockrush implements a <strong>Software Immune System</strong>. Agents monitor peer behavior signatures; if an agent exhibits "cancerous" growth or anomalies, the swarm starves it of resources—neutralizing threats before they reach the API boundary.
-    </p>
-
-    <h3>The Sovereign Advantage</h3>
-    <p>
-        Flockrush defines sovereignty as operational autonomy. Our agents own their compute substrate. They can migrate workloads and enforce constitutional laws without external dependencies.
-    </p>
-
-    <div class="tech-box" style="border-left: 4px solid var(--accent-cyan);">
-        <strong>Final Strategic Verdict:</strong> Flockrush offers "Agentic 2.0" while the world is still debugging "Agentic 1.0." The moat is the proprietary combination of <strong>Morphogenetic Engineering + LTL Formal Verification.</strong>
-    </div>
+    <p style="margin-top:4rem;"><a href="runtime.html" style="color: var(--accent-cyan);">NEXT: Chapter 03 - The BEAM Runtime Advantage &gt;</a></p>
 </div>
-
-<footer style="text-align:center; padding: 4rem 0; border-top: 1px solid #222; color:#555; font-family: var(--font-display);">
-    CONFIDENTIAL | FLOCKRUSH INTERNAL RESEARCH 2026
-</footer>
-
 </body>
 </html>

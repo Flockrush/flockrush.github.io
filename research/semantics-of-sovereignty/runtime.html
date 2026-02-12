@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><title>Runtime Resilience | Flockrush</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/grid/favicon.svg" />    
+    <style>
+        :root { --base-bg: #050505; --accent-cyan: #00FFC2; --accent-purple: #BD00FF; --text-primary: #EDEDED; --font-display: "Courier New", Courier, monospace; --font-body: "Helvetica Neue", Arial, sans-serif; }
+        body { background: var(--base-bg); color: var(--text-primary); font-family: var(--font-body); line-height: 1.8; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        h1 { font-family: var(--font-display); font-size: 3.5rem; line-height: 1.1; color: #fff; }
+        h2 { font-family: var(--font-display); color: var(--accent-cyan); border-bottom: 1px solid #333; margin-top: 3rem; }
+        .subtitle { font-size: 1.2rem; color: #888; font-family: var(--font-display); margin-bottom: 3rem; display: block; }
+        p { font-size: 1.1rem; color: #ccc; margin-bottom: 1.5rem; }
+        .callout { background: #111; border-left: 4px solid var(--accent-purple); padding: 2rem; margin: 2rem 0; }
+        nav { padding: 1.5rem 0; border-bottom: 1px solid #222; font-family: var(--font-display); font-size: 0.8rem; }
+        .nav-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 20px; }
+        a { color: var(--accent-cyan); text-decoration: none; border: 1px solid transparent; padding: 2px 8px; }
+        .active { border: 1px solid var(--accent-cyan); color: #fff; }
+    </style>
+</head>
+<body>
+<nav><div class="nav-inner">
+    <a href="index.html">01_ONTOLOGY</a>
+    <a href="leapfrog.html">02_LEAPFROG</a>
+    <a href="runtime.html" class="active">03_RUNTIME</a>
+    <a href="governance.html">04_GOVERNANCE</a>
+    <a href="outcomes.html">05_OUTCOMES</a>
+</div></nav>
+<div class="container">
+    <h1>Runtime Resilience.</h1>
+    <span class="subtitle">The BEAM/OTP "Secret Weapon."</span>
+
+    <h2>The Python Ceiling</h2>
+    <p>The vast majority of agent frameworks (LangChain, AutoGen) are Python-native. While excellent for interfacing, they are catastrophic for orchestration at scale. Python's Global Interpreter Lock (GIL) limits true parallelism, creating "stop-the-world" latencies that are unacceptable for mission-critical apps.</p>
+
+    
+
+    <h3>Preemptive Scheduling & Supervision Trees</h3>
+    <p>Flockrush aligns with <strong>BEAM (Erlang/Elixir)</strong> principles. The VM acts as an operating system for agents, allocating strict time-slices. If an agent encounters an error, it doesn't corrupt the system. We use <strong>Supervision Trees</strong>: the "Let It Crash" philosophy where supervisors detect exit signals and restart agents instantly to a known good state.</p>
+
+    
+
+    <div class="callout" style="border-color: var(--accent-cyan);">
+        <strong>Distribution Transparency:</strong>
+        BEAM processes communicate via asynchronous message passing. A Flockrush swarm can span multiple data centers or "air-gapped" environments without changing a single line of agent logic.
+    </div>
+    
+    <p style="margin-top:4rem;"><a href="governance.html" style="color: var(--accent-cyan);">NEXT: Chapter 04 - Intrinsic Governance & Immune Systems &gt;</a></p>
+</div>
+</body>
+</html>

@@ -1,327 +1,638 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-  
-    <meta name="keywords"
-        content="Governing the Autonomous Enterprise, OS for Autonomy, autonomous-first, autonomous business OS, AI-native, human-on-the-loop, autonomous agents, generative AI, topological control, swarm speed, Flockrush, Policy Mesh" />
-    <title>Flockrush: Governing the Autonomous Enterprise</title>
-    
-    <meta name="description" content="Flockrush: Governing the Autonomous Enterprise. The first true autonomous-first business OS. Built AI-native with human-on-the-loop governance, it is not an AI-assistant or copilot. It is a self-aware, self-evolving system. Enter the future." />
-    <link rel="canonical" href="https://www.flockrush.com" /> 
-    
-    <meta property="og:title" content="Flockrush: Governing the Autonomous Enterprise" />
-    <meta property="og:description" content="Not 'AI-assisted.' The first OS for Autonomy®, a true Autonomous-first with human-on-the-loop governance." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.flockrush.com/" />
-    <meta property="og:image" content="../assets/flockrush/flockrush-og.webp" /> 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Flockrush: Governing the Autonomous Enterprise" />
-    <meta name="twitter:description" content="Architecting: OS for Autonomy®" />
-    <meta name="twitter:image" content="../assets/flockrush/flockrushgrid-og.webp" />
-    <link rel="icon" type="image/png" href="../assets/flockrush/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/flockrush/favicon.svg" />
-    <link rel="shortcut icon" href="../assets/flockrush/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/flockrush/apple-touch-icon.png" />
-    <link rel="manifest" href="../assets/flockrush/site.webmanifest" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Flockrush: Governing the Autonomous Enterprise",
-      "alternateName": "Autonomous Business OS",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Cloud-based SaaS",
-      "keywords": "Governing the Autonomous Enterprise, OS for Autonomy, autonomous-first, AI-native business OS, human-on-the-loop, autonomous agents, self-evolving OS, not a copilot",
-      "description": "Flockrush Grid: OS for Autonomy®. The first true autonomous-first, AI-native Business OS (ABOS). It is not an 'AI-assistant' or 'copilot.' It is a self-aware, self-evolving, self-healing, and self-protective system built for enterprise, using human-on-the-loop governance. It coordinates AI agents like a murmuration to move business from signal to outcome at swarm speed.",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.flockrush.com"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Flockrush",
-        "url": "https://www.flockrush.com",
-        "sameAs": [
-          "https://twitter.com/FlockrushGrid",
-          "https://github.com/FlockrushGrid",
-          "https://github.com/Flockrush" 
-        ]
-      }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="keywords" content="Governing the Autonomous Enterprise, OS for Autonomy, ABOS, autonomous-first, Policy Mesh, EVF, vLLM, Sovereign DNA, Human-on-the-Loop" />
+  <title>Flockrush: Legislate the Autonomous Enterprise</title>
+
+  <meta name="description" content="Flockrush: The Autonomous Business OS (ABOS). Built AI-native with Human-on-the-Loop governance. We don't build assistants; we grow enterprise organisms." />
+  <link rel="canonical" href="https://www.flockrush.com" />  
+
+  <meta property="og:title" content="Flockrush: Legislate the Autonomous Enterprise" />
+  <meta property="og:description" content="Flockrush: The Autonomous Business OS (ABOS). Built AI-native with Human-on-the-Loop governance. We don't build assistants; we grow enterprise organisms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.flockrush.com/" />
+  <meta property="og:image" content="./assets/flockrush/flockrush-og.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flockrush: Legislate the Autonomous Enterprise" />
+  <meta name="twitter:description" content="Flockrush: Legislate the Autonomous Enterprise" />
+  <meta name="twitter:image" content="./assets/flockrush/flockrushgrid-og.webp" />
+
+  <link rel="icon" type="image/png" href="./assets/flockrush/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./assets/flockrush/favicon.svg" />
+  <link rel="shortcut icon" href="./assets/flockrush/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/flockrush/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/flockrush/site.webmanifest" />
+
+  <style>
+    :root{
+    /* Core palette (Tech Advisory Panel) */
+    --bg-deep:#0b0b0b;
+    --base-bg: #050505; 
+    --flip-bg: #0B0E14;
+    --accent-teal:#19C9A9;
+    --accent-crimson:#F70F4D;
+
+    --glass-bg:rgba(22,22,22,0.90);
+    --glass-border:#272727;
+    --glass-border-bf:#272727bf;
+
+    --text-primary:#F8FAFC;
+    --text-secondary:#94A3B8;
+
+    /* Landing compatibility (your old cyan/gold) */
+    --accent-cyan: var(--accent-teal);
+    --accent-gold:#FFD700;
+    --accent-dim: rgba(25, 201, 169, 0.10);
+
+    /* Typography */
+    --font-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    --font-sans:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+    /* Layout */
+    --max-w: 1100px;
+    --radius-lg: 24px;
+    --radius-md: 14px;
+
+    --shadow-lg: 0 40px 100px -20px rgba(0,0,0,0.9);
+
+    /* Type scale (F500 readable) */
+    --h1: clamp(2.6rem, 5vw, 4.2rem);
+    --h2: clamp(1.7rem, 2.5vw, 2.2rem);
+    --lead: clamp(1.05rem, 1.5vw, 1.2rem);
+    --body: 1.05rem;
+    --small: 0.78rem;
     }
-    </script>
-      
-    <style>
-        :root {
-            --base-bg: #050505; 
-            --content-bg: #0B0E14;
-            --accent-cyan: #00ced1; 
-            --accent-dim: rgba(0, 206, 209, 0.1);
-            --accent-gold: #FFD700;
-            --text-primary: #EDEDED; 
-            --text-secondary: #888888;
-            --font-display: "Courier New", Courier, monospace;
-            --font-body: "Helvetica Neue", Arial, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-body); background-color: var(--base-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-        /* HERO SECTION */
-        header {
-            min-height: 90dvh; 
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; background: radial-gradient(circle at 50% 30%, #1a2525 0%, #050505 70%);
-            position: relative;
-            padding: 4rem 0; 
-        }
-        header::before {
-            content: ""; position: absolute; width: 100%; height: 100%; top: 0; left: 0;
-            background-image: linear-gradient(var(--accent-dim) 1px, transparent 1px),
-            linear-gradient(90deg, var(--accent-dim) 1px, transparent 1px);
-            background-size: 50px 50px; opacity: 0.3; pointer-events: none;
-        }
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html,body{ height:100%; }
 
-        h1 { 
-            font-family: var(--font-display); font-size: 4.5rem; letter-spacing: -2px; line-height: 1.1; margin-bottom: 2rem; 
-            position: relative; z-index: 2;
-        }
-      .cyan-text { color: var(--accent-cyan); text-shadow: 0 0 20px rgba(0, 206, 209, 0.4); }
-      .hero-sub { 
-            font-size: 1.4rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 3rem; position: relative; z-index: 2; 
-        }
-        
-      .btn-group { 
-          display: flex; 
-          gap: 1.5rem; 
-          justify-content: center; 
-          position: relative; 
-          z-index: 2; 
-          flex-wrap: wrap; 
-      }
-      .btn {
-            padding: 1rem 2.5rem; border-radius: 2px; font-family: var(--font-display); font-weight: bold; font-size: 1rem; letter-spacing: 1px;
-            text-transform: uppercase; border: 1px solid var(--accent-cyan); color: var(--accent-cyan);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-      .btn:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 30px var(--accent-cyan); }
-      
-      .btn-secondary {
-          border-color: #444; color: #aaa;
-      }
-      .btn-secondary:hover {
-          border-color: #fff; color: #fff; background: transparent; box-shadow: 0 0 15px rgba(255,255,255,0.2);
-      }
+    body{
+    margin:0;
+    color:var(--text-primary);
+    font-family:var(--font-sans);
+    line-height:1.6;
+    overflow-x:hidden;
+    background-color:var(--bg-deep);
+    background-image:
+        radial-gradient(circle at 0% 0%, rgba(25, 201, 169, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(247, 15, 77, 0.08) 0%, transparent 50%);
+    }
 
-        /* MANIFESTO SECTION */
-        #manifesto { padding: 8rem 0; background: var(--base-bg); border-top: 1px solid #222; }
-      .quote-box {
-            border-left: 4px solid var(--accent-cyan); padding-left: 3rem; margin: 4rem 0;
-        }
-      .quote-text { font-size: 2rem; font-family: var(--font-display); line-height: 1.4; color: #fff; }
-      .quote-author { display: block; margin-top: 1rem; color: var(--text-secondary); font-family: var(--font-display); text-transform: uppercase; font-size: 0.9rem; }
+    a{
+    color:var(--accent-teal);
+    text-decoration:none;
+    border:1px solid transparent;
+    padding:2px 8px;
+    border-radius:10px;
+    transition: 0.2s ease;
+    }
+    a:hover{
+    border-color: rgba(25,201,169,0.35);
+    box-shadow: 0 0 18px rgba(25,201,169,0.10);
+    }
 
-        /* THE JOURNEY (PHASES) */
-        #evolution { padding: 6rem 0; background: var(--content-bg); }
-      .timeline { 
-            display: flex; flex-direction: column; gap: 4rem; position: relative; margin-top: 4rem; 
-            border-left: 1px solid #333; padding-left: 3rem;
-        }
-      .phase-card { position: relative; }
-      .phase-card::before {
-            content: ""; position: absolute; left: -3.35rem; top: 0.5rem; width: 10px; height: 10px; 
-            background: #333; border-radius: 50%; border: 2px solid var(--base-bg);
-        }
-      .phase-card.active::before { background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan); }
-      
-      .phase-label { font-family: var(--font-display); color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; display: block; }
-      .phase-title { font-size: 2rem; margin-bottom: 1rem; color: #fff; }
-      .phase-desc { max-width: 600px; color: #aaa; font-size: 1.1rem; }
+    .container{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 2rem;
+    }
 
-      /* PHILOSOPHY GRID */
-      #philosophy { padding: 8rem 0; text-align: center; }
-      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; text-align: left; margin-top: 4rem; }
-      .phil-card { 
-            background: #090909; border: 1px solid #222; padding: 3rem; transition: transform 0.3s; 
-        }
-      .phil-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); }
-      .phil-icon { font-family: var(--font-display); font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 1.5rem; display: block; }
+    /* =========================================================
+    HOME: HERO (0.7s proposition)
+    ========================================================= */
 
-      /* RECRUITMENT BOX */
-      #recruitment {
-          padding: 6rem 0; background: #080808; border-top: 1px solid #222; border-bottom: 1px solid #222; text-align: center;
-      }
-      .recruit-box {
-          border: 1px solid var(--accent-gold); padding: 3rem; display: inline-block; max-width: 800px; position: relative;
-      }
-      .recruit-tag {
-          position: absolute; top: -15px; left: 50%; transform: translateX(-50%); 
-          background: #080808; padding: 0 1rem; color: var(--accent-gold); font-family: var(--font-display); text-transform: uppercase;
-      }
-      .btn-gold {
-          background: transparent; border: 1px solid var(--accent-gold); color: var(--accent-gold);
-          padding: 1rem 3rem; font-family: var(--font-display); font-weight: bold; text-transform: uppercase;
-          cursor: pointer; margin-top: 2rem; display: inline-block;
-      }
-      .btn-gold:hover { background: var(--accent-gold); color: #000; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+    .hero-hq{
+    min-height: 90dvh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position: relative;
+    padding: 4rem 0;
+    background: radial-gradient(circle at 50% 30%, rgba(25, 201, 169, 0.10) 0%, rgba(11,11,11,1) 70%);
+    }
 
-      footer { padding: 4rem 0; text-align: center; border-top: 1px solid #222; color: #444; font-family: var(--font-display); font-size: 0.9rem; }
+    .hero-hq::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(var(--accent-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--accent-dim) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.30;
+    pointer-events:none;
+    }
 
-      /* MOBILE MEDIA QUERIES */
-      @media (max-width: 768px) {
-          h1 { font-size: 2.8rem; } 
-          .hero-sub { font-size: 1.1rem; }
-          
-          /* Stack buttons on mobile */
-          .btn { width: 100%; display: block; margin-bottom: 0.5rem; } 
-          
-          .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
-          
-          /* Prevent Philosophy header from being huge */
-          #philosophy h2 { font-size: 2rem !important; }
-          
-          .timeline { padding-left: 2rem; }
-          .phase-card::before { left: -2.35rem; }
-          
-          .quote-box { padding-left: 1.5rem; border-left-width: 2px; }
-          .quote-text { font-size: 1.4rem; }
-          
-          #manifesto, #philosophy, #evolution, #recruitment { padding: 4rem 0; }
-          .container { padding: 0 1.5rem; }
-      }
-    </style>
+    .hero-kicker{
+    font-family:var(--font-mono);
+    color:var(--text-secondary);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size: var(--small);
+    margin-bottom: 1.25rem;
+    display:block;
+    position:relative;
+    z-index:2;
+    }
+
+    .hero-hq h1{
+    font-family: var(--font-mono);
+    font-size: var(--h1);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+    text-transform: none;
+    position:relative;
+    z-index:2;
+    }
+    .cyan-text{
+    color: var(--accent-teal);
+    text-shadow: 0 0 20px rgba(25,201,169,0.35);
+    }
+
+    .hero-sub{
+    font-size: var(--lead);
+    color: rgba(148,163,184,0.95);
+    max-width: 920px;
+    margin: 0 auto 1.4rem;
+    position:relative;
+    z-index:2;
+    }
+    .hero-sub strong{ color: rgba(248,250,252,0.95); font-weight: 800; }
+
+    .hero-strip{
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 2.2rem;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 14px;
+    }
+    .hero-card{
+    grid-column: span 12;
+    background: rgba(22,22,22,0.65);
+    border: 1px solid rgba(39,39,39,0.95);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.25rem 1.15rem;
+    text-align: left;
+    }
+    @media (min-width: 860px){
+    .hero-card{ grid-column: span 4; }
+    }
+
+    .hero-tag{
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.72rem;
+    color: var(--accent-teal);
+    font-weight: 800;
+    display:block;
+    margin-bottom: 0.65rem;
+    }
+    .hero-card h3{
+    margin: 0 0 0.5rem;
+    font-size: 1.08rem;
+    letter-spacing: -0.2px;
+    }
+    .hero-card p{
+    margin: 0;
+    color: rgba(148,163,184,0.95);
+    font-size: 0.98rem;
+    line-height: 1.45;
+    }
+
+    /* Buttons (landing) */
+    .btn-group{
+    display:flex;
+    gap: 1rem;
+    justify-content:center;
+    flex-wrap: wrap;
+    position:relative;
+    z-index:2;
+    }
+
+    /* =========================================================
+    HOME: MANIFESTO QUOTE
+    ========================================================= */
+
+    .section{
+    padding: 8rem 0;
+    border-top: 1px solid var(--glass-border-bf);
+    background: var(--base-bg)
+    }
+    .quote-box{
+    max-width: 980px;
+    margin: 0 auto 2.5rem;
+    padding-left: 2rem;
+    border-left: 4px solid var(--accent-teal);
+    }
+    .quote-text{
+    font-size: clamp(1.35rem, 2.3vw, 2.05rem);
+    font-family: var(--font-mono);
+    line-height: 1.35;
+    color: rgba(248,250,252,0.98);
+    }
+    .quote-author{
+    display:block;
+    margin-top: 0.9rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    }
+
+    .section-body{
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.12rem;
+    color: rgba(148,163,184,0.95);
+    }
+
+    /* =========================================================
+    HOME: EVOLUTION TIMELINE
+    ========================================================= */
+
+    .bg-panel{
+    background: rgba(22,22,22,0.35);
+    }
+
+    .h2{
+    font-family: var(--font-mono);
+    font-size: var(--h2);
+    color: rgba(248,250,252,0.98);
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    }
+
+    .timeline{
+    display:flex;
+    flex-direction:column;
+    gap: 2.5rem;
+    position:relative;
+    margin-top: 2.5rem;
+    border-left: 1px solid rgba(148,163,184,0.25);
+    padding-left: 2.2rem;
+    }
+
+    .phase-card{
+    position:relative;
+    }
+    .phase-card::before{
+    content:"";
+    position:absolute;
+    left: -2.65rem;
+    top: 0.45rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(148,163,184,0.35);
+    border: 2px solid rgba(11,11,11,1);
+    }
+    .phase-card.active::before{
+    background: var(--accent-teal);
+    box-shadow: 0 0 16px rgba(25,201,169,0.55);
+    }
+    .phase-label{
+    font-family: var(--font-mono);
+    color: rgba(148,163,184,0.85);
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+    display:block;
+    }
+    .phase-label.active{
+    color: var(--accent-teal);
+    }
+    .phase-title{
+    font-size: 1.8rem;
+    color: rgba(248,250,252,0.98);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+    }
+    .phase-desc{
+    max-width: 760px;
+    color: rgba(148,163,184,0.95);
+    font-size: 1.08rem;
+    }
+
+    /* =========================================================
+    HOME: PHILOSOPHY GRID
+    ========================================================= */
+
+    .center{
+    text-align:center;
+    }
+
+    /* =========================================================
+    HOME: RECRUITMENT / GOLD CTA
+    ========================================================= */
+
+    .recruitment{
+    padding: 5rem 0;
+    background: rgba(22,22,22,0.25);
+    border-top: 1px solid rgba(39,39,39,0.75);
+    border-bottom: 1px solid rgba(39,39,39,0.75);
+    text-align:center;
+    }
+
+    .recruit-box{
+    border: 1px solid var(--accent-gold);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    display:inline-block;
+    max-width: 860px;
+    width: 100%;
+    position: relative;
+    background: rgba(11,11,11,0.55);
+    }
+    .recruit-tag{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform: translateX(-50%);
+    background: rgba(11,11,11,1);
+    padding: 0 1rem;
+    color: var(--accent-gold);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    }
+    .btn-gold{
+    display:inline-block;
+    background: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 1rem 2.6rem;
+    font-family: var(--font-mono);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    cursor:pointer;
+    margin-top: 1.75rem;
+    transition: 0.25s ease;
+    }
+    .btn-gold:hover{
+    background: var(--accent-gold);
+    color:#0b0b0b;
+    box-shadow: 0 0 22px rgba(255,215,0,0.25);
+    }
+
+    .bench{
+        margin-top: 1rem;
+        padding: 1.1rem 1.1rem;
+        border-left: 4px solid var(--accent-crimson);
+        background: rgba(22,22,22,0.45);
+        border-radius: 12px;
+        color: rgba(248,250,252,0.92);
+        border-left-color:var(--accent-teal);
+    }
+    .bench ul{margin:0.75rem 0 0; padding-left: 1.2rem}
+    .bench li{margin:0.35rem 0;color:rgba(148,163,184,0.95)}
+
+   .mandate-section {
+        background: #0b0b0b;
+        border-top: 1px solid var(--glass-border);
+        border-bottom: 1px solid var(--glass-border);
+        padding: 6rem 0;
+    }
+   .mandate-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+        align-items: start;
+    }
+   .mandate-label {
+        font-family: "IBM Plex Mono", monospace;
+        color: var(--accent-crimson); 
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.8rem;
+    }
+   .mandate-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #F8FAFC;
+        border-left: 2px solid var(--accent-teal); /* Teal for Flow */
+        padding-left: 3rem;
+    }
+   .highlight-teal { color: var(--accent-teal); }
+
+    /* =========================================================
+    FOOTER
+    ========================================================= */
+
+    .footer{
+    padding: 3.5rem 0;
+    text-align:center;
+    border-top: 1px solid rgba(39,39,39,0.75);
+    color: rgba(148,163,184,0.60);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    }
+
+    /* =========================================================
+    MOBILE
+    ========================================================= */
+
+    @media (max-width: 768px){
+    .container{ padding: 0 1.5rem; }
+    .btn{ width: 100%; }
+    .hero-card{ padding: 1.1rem; }
+    .quote-box{ padding-left: 1.2rem; border-left-width: 2px; }
+    }
+
+  </style>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Flockrush: Legislate the Autonomous Enterprise",
+    "alternateName": "Autonomous Business OS",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Cloud-based SaaS",
+    "keywords": "Governing the Autonomous Enterprise, OS for Autonomy, ABOS, autonomous-first, Policy Mesh, EVF, vLLM, Sovereign DNA, Human-on-the-Loop",
+    "description": "Flockrush: The Autonomous Business OS (ABOS). Built AI-native with Human-on-the-Loop governance. We don't build assistants; we grow enterprise organisms.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.flockrush.com"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Flockrush",
+      "url": "https://www.flockrush.com",
+      "sameAs": [
+        "https://twitter.com/FlockrushGrid",
+        "https://github.com/FlockrushGrid",
+        "https://github.com/Flockrush"
+      ]
+    }
+  }
+  </script>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <span style="font-family:var(--font-display); color:var(--text-secondary); text-transform:uppercase; letter-spacing:2px; margin-bottom:1.5rem; display:block;">
-                Est. in AI 2018 // Toronto &bull; Luxembourg
-            </span>
-            <h1>
-                Governing the<br>
-                <span class="cyan-text">Autonomous Enterprise.</span>
-            </h1>
-            <p class="hero-sub">
-                We had to build the "AI-assisted" future to realize it was a trap.
-                Now, we build the Policy Mesh that sets the Autonomy free.
+  <header class="hero-hq">
+    <div class="container">
+      <span class="hero-kicker">
+        Est. in AI 2018 // Toronto &bull; Luxembourg // ARCHITECTED CERTAINTY
+      </span>
+
+      <h1>
+        Legislate the<br />
+        <span class="cyan-text">Autonomous Enterprise.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Convert human expertise into <strong>executable law</strong>. Operate autonomous swarms at the <strong>Silicon Floor</strong> with a telco-grade <strong>Policy Mesh</strong>, ensuring speed scales with absolute <strong>Fault Isolation</strong>.
+      </p>
+
+      <div class="hero-strip">
+        <div class="hero-card">
+          <span class="hero-tag">01 // LEGISLATION</span>
+          <h3>Human-ON-the-Loop Oversight</h3>
+          <p>Leadership sets the Mandates. The system executes. Accountability resides at the source—without approval latency.</p>
+        </div>
+
+        <div class="hero-card">
+          <span class="hero-tag">02 // MORPHOGENESIS</span>
+          <h3>Strategic Intent Becomes DNA</h3>
+          <p>Domain experts codify logic directly into Umbrella Faculties. We remove the Translation Gap by growing capabilities from code.</p>
+        </div>
+
+        <div class="hero-card">
+          <span class="hero-tag">03 // VERIFICATION</span>
+          <h3>The EVF Furnace</h3>
+          <p>Every thought experiment is stress-tested inside the Evolutionary Validation Fabric, enforcing least-privilege execution and providing Mission Evidence.</p>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="./grid/index.html" class="btn">Access The Grid</a>
+        <a href="./grid/semantics.html" class="btn btn-secondary">Tactical Intel</a>
+        <a href="./ai-market/index.html" class="btn">AI Market Report</a>
+        <a href="https://github.com/Flockrush" class="btn btn-muted">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="mandate-section">
+    <div class="container">
+        <div class="mandate-grid">
+            <div class="mandate-label">
+                Strategic Intent<br/>The Mandate
+            </div>
+            <div class="mandate-text">
+                Flockrush Grid exists to turn human expertise into <span class="highlight-teal">executable law</span>. We remove the translation gap by letting domain experts write policy directly in a <span class="highlight-teal">Policy Mesh DSL</span>, then we run autonomous swarms at machine speed inside verified boundaries enforced by <span class="highlight-teal">EVF least-privilege execution</span>. As the system compounds enterprise outcomes through self-sustaining growth pipelines, we route that compounding power into <span class="highlight-teal">measurable human uplift</span>—starting with housing.
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="quote-box">
+        <p class="quote-text">
+          "A faster car stuck in a traffic jam is still stuck.
+          The bottleneck isn't the AI. It is the <span class="cyan-text">Human-in-the-Loop</span>."
+        </p>
+        <span class="quote-author">// The Philosophy: Breaking the Traffic Jam</span>
+      </div>
+
+      <p class="section-body">
+        Legacy vendors sell "CoPilots" that increase the volume of tasks but fail to address the <strong>Architectural Debt</strong> of manual approvals. We move the human from the process to the <strong>Council</strong>, turning you into a <strong>Legislator</strong> who defines the laws that set the swarm free.
+      </p>
+    </div>
+  </section>
+
+  <section class="section bg-panel">
+    <div class="container">
+      <h2 class="h2">Morphogenesis of a New Category</h2>
+
+      <div class="timeline">
+        <div class="phase-card">
+          <span class="phase-label">Phase 1</span>
+          <h3 class="phase-title">The Try (AI-Assisted)</h3>
+          <p class="phase-desc">
+            We built tools that waited for a human to click "Approve." It was a high-performance engine chained to a manual post.
+          </p>
+        </div>
+
+        <div class="phase-card">
+          <span class="phase-label">Phase 2</span>
+          <h3 class="phase-title">The Breakthrough (Autonomous Agent)</h3>
+          <p class="phase-desc">
+            We built entities that could act independently. But a single agent is just a smarter tool.
+          </p>
+        </div>
+
+        <div class="phase-card active">
+          <span class="phase-label active">Phase 3</span>
+          <h3 class="phase-title"><span class="cyan-text">The Reality (The ABOS)</span></h3>
+          <p class="phase-desc">
+            We realized a swarm is not a workforce; it is a <strong>Sovereign Organism</strong>. That organism requires a <strong>Nervous System</strong> and an <strong>Immune System</strong>. We built the Grid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+        <div class="bench">
+            <div class="hero-tag">TECHNICAL BRIEFING // SWARM VISUALIZATION</div>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                To bridge high-resolution technical signals with strategic business outcomes, the Grid now includes a <strong>WebGL Swarm Visualization Faculty</strong>—allowing Commanders to monitor the metabolism of 50 million mission agents in real-time.
             </p>
-            <div class="btn-group">
-                <a href="./grid/index.html" class="btn">Enter The Grid</a>
-                <a href="./grid/semantics.html" class="btn btn-secondary">Read the Research</a>
-                <a href="./ai-market/index.html" class="btn">AI Market Report</a>
-                <a href="https://github.com/Flockrush" class="btn" style="border-color:#333; color:#aaa;">GitHub</a>
-            </div>
+            <div class="mandate-label" style="font-size: 0.65rem; margin-bottom: 1rem;">The “Silicon Floor” Benchmarks (V5C CORE)</div>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 0.5rem;"><i class="ri-flashlight-fill" style="color: #19C9A9;"></i> <strong>Action Reflex:</strong> 15.41 nanoseconds.</li>
+                <li style="margin-bottom: 0.5rem;"><i class="ri-shield-flash-fill" style="color: #19C9A9;"></i> <strong>Fault Isolation:</strong> Absolute isolation via Umbrella Architecture.</li>
+                <li style="margin-bottom: 0.5rem;"><i class="ri-file-list-3-fill" style="color: #19C9A9;"></i> <strong>Mission Evidence:</strong> Immutable state-transition records for every individual agent.</li>
+            </ul>
         </div>
-    </header>
+    </div>
+  </section>
 
-    <section id="manifesto">
-        <div class="container">
-            <div class="quote-box">
-                <p class="quote-text">
-                    "A faster car stuck in a traffic jam is still stuck. 
-                    The bottleneck isn't the AI. It is the <span class="cyan-text">Human-in-the-Loop</span>."
-                </p>
-                <span class="quote-author">// Flockrush Philosophy</span>
-            </div>
-            <p style="max-width: 700px; font-size: 1.2rem; color: #ccc;">
-                The tech industry is selling you "Copilots" to help you work faster. 
-                But adding speed to a broken, approval-heavy workflow only creates more friction. 
-                We realized the only way to win is to remove the manual work entirely.
-            </p>
-        </div>
-    </section>
+  <section class="recruitment">
+    <div class="container">
+      <div class="recruit-box">
+        <span class="recruit-tag">Recruitment: The Sovereign Council</span>
+        <h3 style="color: rgba(248,250,252,0.98); font-size: 2rem; margin-bottom: 0.9rem; letter-spacing: -0.5px;">
+          Now Recruiting // Clearance Level: Architect
+        </h3>
+        <p style="color: rgba(148,163,184,0.95); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+          We are hiring the "Legislators"—retired C-Suite executives and deep Subject Matter Experts—to define the <strong>Policy Mesh</strong> that will govern the Global Fortune 500.
+        </p>
+        <a href="council.html" class="btn-gold">View Requirements</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="evolution">
-        <div class="container">
-            <h2 style="font-family:var(--font-display); font-size:2rem;">The Evolution</h2>
-            
-            <div class="timeline">
-                
-                <div class="phase-card">
-                    <span class="phase-label">Phase 1: The Try</span>
-                    <h3 class="phase-title">AI-Assisted (The Trap)</h3>
-                    <p class="phase-desc">
-                        We started like everyone else. We built "AI Twins." They were brilliant, but they were tools. They waited for a human to click "Approve." They were engines chained to a post.
-                    </p>
-                </div>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="mailto:grid@flockrush.com">grid@flockrush.com</a> <br />
+        Flockrush: Legislate the Autonomous Enterprise.<br />
+        &copy; 2025 Flockrush
+      </p>
+    </div>
+  </footer>
 
-                <div class="phase-card">
-                    <span class="phase-label">Phase 2: The Breakthrough</span>
-                    <h3 class="phase-title">The Autonomous Agent</h3>
-                    <p class="phase-desc">
-                        We pivoted. We built an agent that didn't ask for permission. It wasn't a model anymore; it was an entity. But a single agent is just a tool. 
-                    </p>
-                </div>
-
-                <div class="phase-card active">
-                    <span class="phase-label" style="color:var(--accent-cyan);">Phase 3: The Reality</span>
-                    <h3 class="phase-title"><span class="cyan-text">The Autonomous OS</span></h3>
-                    <p class="phase-desc">
-                        We realized that a swarm of agents is not a workforce; it is a <strong>sovereign capability</strong>. That capability needs a <strong>Governance Mesh</strong>. So we built Flockrush Grid.
-                    </p>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="philosophy">
-        <div class="container">
-            <h2 style="font-size:3rem; line-height:1.1; max-width:800px; margin:0 auto;">
-                We are not anti-human.<br>
-                We are relentlessly <span class="cyan-text">Pro-Outcome.</span>
-            </h2>
-
-            <div class="grid-2">
-                <div class="phil-card">
-                    <span class="phil-icon">&lt;Human-in-the-Loop /&gt;</span>
-                    <h3>The Bottleneck</h3>
-                    <p style="color:#888;">
-                        The human is a process worker. A fallible operator who slows the machine down to the speed of a mouse click.
-                    </p>
-                    
-                </div>
-                <div class="phil-card" style="border-color:var(--accent-cyan);">
-                    <span class="phil-icon">&lt;Human-ON-the-Loop /&gt;</span>
-                    <h3>The Governor</h3>
-                    <p style="color:#888;">
-                        The human is a Legislator. You set the "Policy Mesh," and the swarm executes the mission within your laws.
-                    </p>
-                </div>
-            </div>
-            
-            <div style="margin-top:5rem;">
-                <a href="./grid/index.html" class="btn" style="background:var(--accent-cyan); color:#050505;">Meet the Product</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- RECRUITMENT SECTION -->
-    <section id="recruitment">
-        <div class="container">
-            <div class="recruit-box">
-                <span class="recruit-tag">Now Recruiting</span>
-                <h3 style="color:#fff; font-size:2rem; margin-bottom:1rem;">The Governance Council</h3>
-                <p style="color:#aaa; max-width:600px; margin:0 auto;">
-                    We are hiring the "Architects"—retired C-Suite executives and deep Subject Matter Experts—to define the Policy Mesh that will govern the Global Fortune 500.
-                </p>
-                <a href="council.html" class="btn-gold">View Fellowship Requirements</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>
-                OS for Autonomy®<br>
-                Flockrush: Governing the Autonomous Enterprise.<br>
-                &copy; 2025 Flockrush. Based in Toronto & Luxembourg.
-            </p>
-        </div>
-    </footer>
 </body>
 </html>
